@@ -7,8 +7,6 @@
  * [Preparation](#preparation)
  * [Installation](#installation)
  * [Experience Different Functions](#function-use)
- * [Supported Environments](#supported-environments)
- * [Result](#result)
  * [License](#license)
 
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black"
+    android:fitsSystemWindows="true">
+
+    <VideoView
+        android:id="@+id/videoplay_videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/videoplay_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/petstore_10_dp"
+        android:background="@drawable/btn_video"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_video_del" />
+
+</RelativeLayout>

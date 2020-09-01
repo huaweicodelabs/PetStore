@@ -1,0 +1,221 @@
+<resources>
+
+    <string-array name="spinner_list">
+               
+        <item>1km</item>
+               
+        <item>2km</item>
+               
+        <item>5km</item>
+           
+    </string-array>
+
+    <string-array name="numbers">
+        <item>零</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+        <item>七</item>
+        <item>八</item>
+        <item>九</item>
+    </string-array>
+
+    <string-array name="units">
+        <item> </item>
+        <item>十</item>
+        <item>百</item>
+        <item>千</item>
+        <item>万</item>
+        <item>十</item>
+        <item>百</item>
+        <item>千</item>
+        <item>亿</item>
+        <item>十</item>
+    </string-array>
+
+    <string name="app_name">宠物商店</string>
+    <string name="city">中国南京</string>
+    <string name="MC">消息中心</string>
+
+    <string name="home">首页</string>
+    <string name="shoppingCart">购物车</string>
+    <string name="mine">我的</string>
+
+    <string name="store_detail">店铺详情</string>
+    <string name="pet_store">宠物商店</string>
+    <string name="pet_ebook">宠物电子书</string>
+    <string name="pet_ebook_detail">文章详情</string>
+    <string name="pet_video_collection">收藏</string>
+    <string name="pet_video_recommend">推荐</string>
+    <string name="video_collection_1">收藏-这是什么</string>
+    <string name="video_collection_2">收藏-别挠我</string>
+    <string name="video_collection_3">收藏-我不服</string>
+    <string name="video_recommend_1">推荐-这是什么</string>
+    <string name="video_recommend_2">推荐-别挠我</string>
+    <string name="video_recommend_3">推荐-我不服</string>
+
+    <string name="member_center">会员中心</string>
+
+    <string name="register">用户注册</string>
+    <string name="login">用户登录</string>
+    <string name="login_with_fingerprint">指纹登录</string>
+    <string name="setting">设置</string>
+    <string name="order">订单查询</string>
+    <string name="bind_phone">绑定手机</string>
+    <string name="agreement_privacy">点注册/登录代表同意宠物市场《用户协议》和《隐私政策》</string>
+
+    <string name="person_center">个人中心</string>
+    <string name="login_not_login">未登录</string>
+    <string name="login_login">已登录</string>
+    <string name="members">成为会员</string>
+    <string name="join_members">加入会员可免费看</string>
+    <string name="member_name">月度会员</string>
+    <string name="member_name_desc">会员套餐%1$s</string>
+
+    <string name="member_desc">可免费观看宠物视频</string>
+    <string name="member_price">10元</string>
+    <string name="member_pay">立即续费</string>
+    <string name="add_delivery_address">+ 添加收货地址</string>
+
+    <string name="orders">我的订单</string>
+    <string name="search_detail">查询详情</string>
+    <string name="price_unit">¥%1$s</string>
+    <string name="order_total">共 %1$s 件，总计： %2$s 元</string>
+    <string name="order_totals">共 %1$s 件，总计： %2$s 元</string>
+    <string name="order_unit">%1$s元</string>
+    <string name="unit_negative">负</string>
+
+    <string name="address">收货地址</string>
+
+    <string name="head_img">头像</string>
+    <string name="nick_name">昵称</string>
+    <string name="user_name">用户名</string>
+    <string name="address_manage">地址管理</string>
+    <string name="safety_manage">安全管理</string>
+
+    <string name="accept_news">接收新消息</string>
+
+    <string name="address_add">添加收货地址</string>
+    <string name="all">全部</string>
+    <string name="input_search_hint">请输入搜索内容</string>
+    <string name="pet_video">宠物视频</string>
+    <string name="main_item_name">浩洋犬舍</string>
+    <string name="main_item_distance">1000m</string>
+    <string name="user_sex">性别</string>
+    <string name="user_sex_noset">未设置</string>
+    <string name="user_sex_male">男</string>
+    <string name="user_sex_female">女</string>
+    <string name="user_sex_secret">保密</string>
+    <string name="user_email">邮箱</string>
+    <string name="verify_code">发送验证码</string>
+    <string name="verify_gain">验证码获取中</string>
+    <string name="huawei_sign_out">退出华为账号</string>
+    <string name="huawei_sign_out_desc">您当前使用华为账号登录，请确认是否需要退出华为账号</string>
+
+    <string name="nearby">附近</string>
+    <string name="mill">&lt; 1000m</string>
+    <string name="platform_auth">平台认证</string>
+    <string name="paid_deposit">已缴押金</string>
+    <string name="root_tip">支付风险提示</string>
+    <string name="root_desc">检测到本次支付有风险，请确认是否继续?</string>
+
+    <string name="message_default_desc">最新猫粮上新，快去看看吧，啊实打实的看见爱上房间爱嘉实基金爱神的箭爱神的箭</string>
+    <string name="message_default_title">宠物商品上新啦</string>
+
+    <string name="notify_ticker">宠物商店</string>
+    <string name="notify_content_title">新消息</string>
+    <string name="notify_content_text">附近1Km有宠物商店</string>
+
+    <string name="toast_exit">再按一次退出程序</string>
+    <string name="toast_input_username">请输入用户名</string>
+    <string name="toast_input_nickname">请输入昵称</string>
+    <string name="toast_input_password">请输入密码</string>
+    <string name="toast_input_password_double">请再次输入密码</string>
+    <string name="toast_input_phone">请输入手机号</string>
+    <string name="toast_input_verifycode">请输入验证码</string>
+    <string name="toast_verifycode_error">获取验证码权限错误</string>
+    <string name="toast_input_verifycode_correct">请输入正确的验证码</string>
+    <string name="toast_passwords_different">两次输入的密码必须一样</string>
+    <string name="toast_no_video_url">无播放地址</string>
+    <string name="toast_userdetect_error">虚假用户检测未通过</string>
+    <string name="toast_must_register">请先注册用户</string>
+    <string name="toast_has_register">用户已经被注册</string>
+    <string name="toast_password_error">密码输入错误</string>
+    <string name="toast_into_geofence">已进入地理围栏</string>
+    <string name="toast_collection">关注成功</string>
+    <string name="toast_cancel_collection">取消关注</string>
+
+    <string name="toast_account">欢迎使用Account Kit</string>
+    <string name="toast_account_verifycode">欢迎使用Account Kit：短信验证码</string>
+    <string name="toast_push">欢迎使用Push Kit</string>
+    <string name="toast_push_init">欢迎使用Push Kit：初始化</string>
+    <string name="toast_setting">欢迎使用 FIDO</string>
+    <string name="toast_iap">欢迎使用IAP Kit</string>
+    <string name="toast_iap_product">欢迎使用IAP Kit:商品管理</string>
+    <string name="toast_location">欢迎使用Location Kit</string>
+    <string name="toast_site">欢迎使用Site Kit</string>
+    <string name="toast_site_map_location">欢迎使用Site，Map，Location Kit</string>
+    <string name="toast_site_map">欢迎使用Site，Map Kit</string>
+
+    <string name="input_phone">请输入手机号</string>
+    <string name="input_verify_code">请输入验证码</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="input_nickname">请输入昵称</string>
+    <string name="input_password">请输入密码</string>
+    <string name="input_password_double">请再次输入密码</string>
+
+    <string name="btn_login">登录</string>
+    <string name="btn_look_more">查看更多</string>
+    <string name="btn_exit_login">退出登录</string>
+    <string name="btn_register">注册</string>
+    <string name="btn_confirm">确定</string>
+    <string name="other_login_methods">快捷登录方式</string>
+    <string name="btn_contuine">继续</string>
+    <string name="btn_back">返回</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_yes">是</string>
+    <string name="btn_no">否</string>
+    <string name="loading_desc">加载中…</string>
+    <string name="logging_desc">登录中…</string>
+
+    <string name="iap_buy_now">立即购买</string>
+    <string name="iap_not_support">暂不支持应用内支付</string>
+    <string name="iap_pls_login">请先登录华为帐号</string>
+    <string name="iap_request_fail">请求失败</string>
+    <string name="iap_buy_fail">购买失败</string>
+    <string name="iap_buy_already">已经购买,请刷新查看</string>
+    <string name="iap_sub_manage">续费管理</string>
+    <string name="iap_buy_done">交易完成</string>
+    <string name="iap_buy_cancel">交易取消</string>
+    <string name="iap_buy_refund">已退款</string>
+    <string name="iap_member_valid">有效期：%1$s</string>
+    <string name="iap_buy_forever">永久有效</string>
+    <string name="iap_buy_subscription">自动续费</string>
+    <string name="iap_buy_member_forever">永久会员</string>
+    <string name="iap_buy_member_subscription">订阅会员</string>
+    <string name="iap_buy_member">普通会员</string>
+    <string name="iap_product_not_support">商品所在地与帐号服务地不匹配</string>
+    <string name="iap_note_title">应用内支付</string>
+    <string name="iap_note_desc">注意：下面的操作将进入支付确认页面。本书举例的apk为测试使用，未配置沙盒测试环境，您的操作将可能导致真实付费，请谨慎操作</string>
+
+    <string name="title_add_address">添加收货地址</string>
+    <string name="contact_person">联系人:</string>
+    <string name="please_input_name">请输入姓名</string>
+    <string name="please_input_phone">请输入手机号码</string>
+    <string name="please_input_address">请输入地址</string>
+    <string name="address_title">地址:</string>
+    <string name="phone_title">电话:</string>
+    <string name="auto_location">自动定位</string>
+    <string name="setting_default_address">设置默认地址</string>
+    <string name="default_address_description">每次下单时会使用改地址,请在下单时确认</string>
+    <string name="save_address">保存地址</string>
+    <string name="add_address">添加</string>
+    <string name="add_follow">关注</string>
+    <string name="default_address_flag">默认</string>
+    <string name="toast_mobile_number_incorrect">手机号码格式不正确</string>
+    <string name="toast_please_add_address">请添加收货地址</string>
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="api_key">Your API Key</string>
+
+    <!--    系统完整性检测结果Jws验证URI-->
+    <string name="sys_integrity_jws_verifier_url">&lt;baseurl&gt;/petstore/safetydetect/verifyjws</string>
+
+    <!--    虚假用户检测结果验证URI-->
+    <string name="user_detection_user_risk_verifier_url">&lt;baseurl&gt;/petstore/safetydetect/verifyuserrisks</string>
+
+    <string name="walking_route_planning_url">https://mapapi.cloud.huawei.com/mapApi/v1/routeService/walking</string>
+
+    <string name="bicycling_route_planning_url">https://mapapi.cloud.huawei.com/mapApi/v1/routeService/bicycling</string>
+
+    <string name="driving_route_planning_url">https://mapapi.cloud.huawei.com/mapApi/v1/routeService/driving</string>
+
+    <string name="cipher_key">Your Public Key Of IAP Information</string>
+
+</resources>

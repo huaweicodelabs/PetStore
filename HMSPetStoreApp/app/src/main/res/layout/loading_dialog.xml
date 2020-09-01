@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:padding="@dimen/petstore_10_dp">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/petstore_10_dp"
+        android:layout_marginBottom="@dimen/petstore_15_dp"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical">
+
+
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/loading_desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:includeFontPadding="false"
+                android:paddingLeft="@dimen/petstore_10_dp"
+                android:paddingRight="@dimen/petstore_10_dp"
+                android:gravity="center"
+                android:text="@string/loading_desc"
+                android:textColor="@color/petstore_black"
+                android:textSize="@dimen/petstore_text_18_sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

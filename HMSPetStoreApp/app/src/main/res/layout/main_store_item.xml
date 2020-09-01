@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/petstore_5_dp"
+        android:text="@string/pet_store"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/petstore_text_16_sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/petstore_5_dp"
+            android:contentDescription="@null"
+            android:src="@mipmap/ic_item_head" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_store_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="@dimen/petstore_10_dp"
+                android:paddingTop="@dimen/petstore_5_dp"
+                android:paddingEnd="@dimen/petstore_5_dp"
+                android:paddingBottom="@dimen/petstore_5_dp"
+                android:text="@string/main_item_name"
+                android:textColor="@color/Grey_600"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+            <TextView
+                android:id="@+id/main_store_item_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="@dimen/petstore_10_dp"
+                android:paddingTop="@dimen/petstore_5_dp"
+                android:paddingEnd="@dimen/petstore_5_dp"
+                android:paddingBottom="@dimen/petstore_5_dp"
+                android:text="@string/main_item_distance"
+                android:textColor="@color/Grey_600"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_store_item_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_margin="@dimen/petstore_3_dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

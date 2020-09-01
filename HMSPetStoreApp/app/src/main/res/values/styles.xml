@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- 选择的底线颜色 -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- values-v21/style.xml-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <!-- 系统背景 -->
+        <item name="android:colorBackground">@color/White</item>
+    </style>
+
+
+    <!-- 按钮 -->
+    <style name="input_box" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">SourceHanSansCN-Regular</item>
+        <item name="android:gravity">center_vertical</item>
+        <!-- 默认状态提示颜色和字体-->
+        <item name="android:textColorHint">@color/Grey_400</item>
+        <item name="android:textSize">@dimen/petstore_text_16_sp</item>
+    </style>
+
+
+    <!-- 按钮 -->
+    <style name="btn_normal" parent="TextAppearance.AppCompat.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">SourceHanSansCN-Regular</item>
+        <item name="android:background">@drawable/btn_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/petstore_text_18_sp</item>
+        <item name="android:textColor">@color/petstore_white</item>
+    </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/petstore_text_16_sp</item>
+    </style>
+
+</resources>

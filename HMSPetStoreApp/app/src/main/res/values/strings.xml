@@ -1,0 +1,218 @@
+<resources>
+    <string-array name="spinner_list">
+        <item>1km</item>
+        <item>2km</item>
+        <item>5km</item>
+    </string-array>
+
+    <string-array name="numbers">
+        <item>Zero</item>
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+    </string-array>
+
+    <string-array name="units">
+        <item> </item>
+        <item>Ten</item>
+        <item>Hundred</item>
+        <item>Thousand</item>
+        <item>Ten Thousand</item>
+        <item>Ten</item>
+        <item>Hundred</item>
+        <item>Thousand</item>
+        <item>Billion</item>
+        <item>Ten</item>
+    </string-array>
+
+    <string name="app_name">HMSPetStoreApp</string>
+    <string name="city">Nanjing, China</string>
+    <string name="MC">Message Center</string>
+    <string name="home">Home</string>
+    <string name="shoppingCart">Cart</string>
+    <string name="mine">Me</string>
+
+    <string name="store_detail">Shop details</string>
+    <string name="pet_store">Pet shops</string>
+    <string name="pet_ebook">Pet e-books</string>
+    <string name="pet_ebook_detail">Article</string>
+    <string name="pet_video_collection">Favorites</string>
+    <string name="pet_video_recommend">Recommendations</string>
+    <string name="video_collection_1">What a fun time!</string>
+    <string name="video_collection_2">Let\'s play together!</string>
+    <string name="video_collection_3">We\'re friends!</string>
+    <string name="video_recommend_1">What a fun time!</string>
+    <string name="video_recommend_2">Let\'s play together!</string>
+    <string name="video_recommend_3">We\'re friends!</string>
+
+    <string name="member_center">Member center</string>
+
+    <string name="register">Sign up</string>
+    <string name="login">Sign in</string>
+    <string name="login_with_fingerprint">Fingerprint sign-in</string>
+    <string name="setting">Settings</string>
+    <string name="order">My orders</string>
+    <string name="bind_phone">Link mobile</string>
+    <string name="agreement_privacy">Touching Sign in or Sign up means that you agree with the User Agreement and Privacy Statement of this app.</string>
+
+    <string name="person_center">Personal center</string>
+    <string name="login_not_login">Not signed in</string>
+    <string name="login_login">Signed in</string>
+    <string name="members">Become a member</string>
+    <string name="join_members">Free for members</string>
+    <string name="member_name">Monthly membership</string>
+    <string name="member_name_desc">Membership package %1$s</string>
+
+    <string name="member_desc">Watch pet videos for free</string>
+    <string name="member_price">¥10</string>
+    <string name="member_pay">Renew</string>
+
+    <string name="add_delivery_address">+ Add an address</string>
+
+    <string name="orders">My orders</string>
+    <string name="search_detail">Details</string>
+    <string name="price_unit">¥%1$s</string>
+    <string name="order_total">%1$s item, total: ¥%2$s</string>
+	<string name="order_totals">%1$s items, total: ¥%2$s</string>
+    <string name="address">Address</string>
+    <string name="order_unit">¥%1$s</string>
+    <string name="unit_negative">−</string>
+
+    <string name="head_img">Profile picture</string>
+    <string name="nick_name">Nickname</string>
+    <string name="user_name">User name</string>
+    <string name="address_manage">Addresses</string>
+    <string name="safety_manage">Security</string>
+    <string name="user_sex">Gender</string>
+    <string name="user_sex_noset">Not set</string>
+    <string name="user_sex_male">Male</string>
+    <string name="user_sex_female">Female</string>
+    <string name="user_sex_secret">Save</string>
+    <string name="user_email">Email</string>
+    <string name="huawei_sign_out">Sign out from HUAWEI ID</string>
+    <string name="huawei_sign_out_desc">Sign out from your HUAWEI ID and go back to the sign-in screen?</string>
+
+    <string name="accept_news">Allow message notifications</string>
+
+    <string name="address_add">Add an address</string>
+
+    <string name="all">All</string>
+    <string name="input_search_hint">Search</string>
+    <string name="pet_video">Pet videos</string>
+    <string name="main_item_name">Mr Smith\'s Pet Shop</string>
+    <string name="main_item_distance">1000m</string>
+    <string name="verify_code">Send</string>
+    <string name="verify_gain">Obtaining the verification code...</string>
+
+    <string name="nearby">Nearby</string>
+    <string name="mill">&lt; 1000m</string>
+    <string name="platform_auth">Verified</string>
+    <string name="paid_deposit">Deposit paid</string>
+    <string name="root_tip">Payment risk detected</string>
+    <string name="root_desc">The system detected a risk in this payment. Continue?</string>
+
+    <string name="message_default_desc">Here are the newest goodies for cats. Choose some for your cats!</string>
+    <string name="message_default_title">Newest pet products</string>
+
+    <string name="notify_ticker">Pet shops</string>
+    <string name="notify_content_title">New message</string>
+    <string name="notify_content_text">Pet shop found within 1 km</string>
+
+    <string name="toast_exit">Press again to exit.</string>
+    <string name="toast_input_username">User name.</string>
+    <string name="toast_input_nickname">Nickname.</string>
+    <string name="toast_input_password">Password.</string>
+    <string name="toast_input_password_double">Confirm password.</string>
+    <string name="toast_input_phone">Mobile number.</string>
+    <string name="toast_input_verifycode">Obtain the verification code.</string>
+    <string name="toast_verifycode_error">No permission to obtain the verification code.</string>
+    <string name="toast_input_verifycode_correct">Incorrect verification code.</string>
+    <string name="toast_passwords_different">The two passwords you entered must be the same.</string>
+    <string name="toast_no_video_url">No video URL found.</string>
+    <string name="toast_must_register">Sign up first.</string>
+    <string name="toast_has_register">This user already exists.</string>
+    <string name="toast_password_error">Incorrect password.</string>
+    <string name="toast_userdetect_error">Your account didn\'t pass the fake user test.</string>
+    <string name="toast_into_geofence">You have entered the geofence.</string>
+    <string name="toast_collection">Followed successfully.</string>
+    <string name="toast_cancel_collection">Unfollow.</string>
+
+    <string name="toast_account">Welcome to Account Kit.</string>
+    <string name="toast_account_verifycode">Welcome to Account Kit (SMS verification code autofill).</string>
+    <string name="toast_push">Welcome to Push Kit.</string>
+    <string name="toast_push_init">Welcome to Push Kit (initialization).</string>
+    <string name="toast_setting">Welcome to FIDO.</string>
+    <string name="toast_iap">Welcome to IAP.</string>
+    <string name="toast_iap_product">Welcome to IAP (product management).</string>
+    <string name="toast_location">Welcome to Location Kit.</string>
+    <string name="toast_site">Welcome to Site Kit.</string>
+    <string name="toast_site_map_location">Welcome to Site Kit, Map Kit, and Location Kit.</string>
+    <string name="toast_site_map">Welcome to Site Kit and Map Kit.</string>
+
+    <string name="input_phone">Mobile number</string>
+    <string name="input_verify_code">Verification code</string>
+    <string name="input_username">User name</string>
+    <string name="input_nickname">Nickname</string>
+    <string name="input_password">Password</string>
+    <string name="input_password_double">Confirm password</string>
+
+    <string name="btn_login">Sign in</string>
+    <string name="btn_look_more">View more</string>
+    <string name="btn_exit_login">Sign out</string>
+    <string name="btn_register">This user already exists.</string>
+    <string name="btn_confirm">OK</string>
+    <string name="other_login_methods">Quick sign-in</string>
+    <string name="loading_desc">Loading...</string>
+    <string name="logging_desc">Sign in...</string>
+
+    <string name="btn_contuine">Continue</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+
+    <string name="iap_buy_now"></string>
+    <string name="iap_not_support">IAP currently unsupported.</string>
+    <string name="iap_pls_login">Sign in to your HUAWEI ID first.</string>
+    <string name="iap_request_fail">Request failed.</string>
+    <string name="iap_buy_fail">Payment failed.</string>
+    <string name="iap_buy_already">Already been purchased. Refresh the page.</string>
+    <string name="iap_sub_manage">Renewal</string>
+    <string name="iap_buy_done">Completed</string>
+    <string name="iap_buy_cancel">Canceled</string>
+    <string name="iap_buy_refund">Refunded</string>
+    <string name="iap_member_valid">Validity period: %1$s</string>
+    <string name="iap_buy_forever">Permanent</string>
+    <string name="iap_buy_subscription">Auto-renew</string>
+    <string name="iap_buy_member_forever">Permanent membership</string>
+    <string name="iap_buy_member_subscription">Subscription member</string>
+    <string name="iap_buy_member">Ordinary member</string>
+    <string name="iap_product_not_support">The product location and HUAWEI ID location do not match.</string>
+    <string name="iap_note_title">IAP</string>
+    <string name="iap_note_desc">Note: You\'ll now go to the payment confirmation screen. Before confirming the payment, make sure that you have added your account to the sandbox testing environment. Otherwise, actual payments may be made.</string>
+
+
+    <string name="title_add_address">Add an address</string>
+    <string name="contact_person">Contact:</string>
+    <string name="please_input_name">Name</string>
+    <string name="please_input_phone">Phone number</string>
+    <string name="please_input_address">Enter an address</string>
+    <string name="address_title">Address:</string>
+    <string name="phone_title">Mobile:</string>
+    <string name="auto_location">Auto-locate</string>
+    <string name="setting_default_address">Set as default address</string>
+    <string name="default_address_description">This address will be used by default when you place an order.</string>
+    <string name="save_address">Save</string>
+    <string name="add_address">Add</string>
+    <string name="add_follow">Follow</string>
+    <string name="default_address_flag">Default</string>
+    <string name="toast_mobile_number_incorrect">Incorrect mobile number format.</string>
+    <string name="toast_please_add_address">Add an address.</string>
+
+</resources>

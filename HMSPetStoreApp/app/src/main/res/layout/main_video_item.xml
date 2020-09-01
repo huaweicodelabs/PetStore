@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/petstore_5_dp"
+        android:text="@string/pet_video"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/petstore_text_16_sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_video_item_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_margin="@dimen/petstore_2_dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

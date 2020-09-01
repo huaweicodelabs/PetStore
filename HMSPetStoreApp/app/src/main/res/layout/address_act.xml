@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/petstore_48_dp"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@null"
+            android:fontFamily="SourceHanSansCN-Regular"
+            android:paddingStart="@dimen/petstore_10_dp"
+            android:paddingEnd="@dimen/petstore_10_dp"
+            android:src="@mipmap/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="SourceHanSansCN-Regular"
+            android:gravity="center"
+            android:text="@string/title_add_address"
+            android:textColor="@color/petstore_black"
+            android:textSize="@dimen/petstore_text_18_sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/petstore_11_dp"
+            android:layout_marginTop="@dimen/petstore_11_dp"
+            android:layout_marginBottom="@dimen/petstore_11_dp"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/contact_person"
+                android:textColor="@color/petstore_black"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/petstore_20_dp"
+                android:background="@null"
+                android:enabled="true"
+                android:hint="@string/please_input_name"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/petstore_text_14_sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include layout="@layout/view_line_start_10dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/petstore_11_dp"
+            android:layout_marginTop="@dimen/petstore_11_dp"
+            android:layout_marginBottom="@dimen/petstore_11_dp"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/phone_title"
+                android:textColor="@color/petstore_black"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/petstore_20_dp"
+                android:background="@null"
+                android:enabled="true"
+                android:inputType="number"
+                android:hint="@string/please_input_phone"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/petstore_text_14_sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include layout="@layout/view_line_start_10dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/petstore_10_dp"
+            android:layout_marginTop="@dimen/petstore_10_dp"
+            android:layout_marginBottom="@dimen/petstore_10_dp"
+            android:fitsSystemWindows="true"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/address_title"
+                android:textColor="@color/petstore_black"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/petstore_20_dp"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/petstore_10_dp"
+                    android:layout_marginBottom="@dimen/petstore_10_dp"
+                    android:background="@null"
+                    android:enabled="true"
+                    android:hint="@string/please_input_address"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/petstore_text_14_sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petstore_1_dp"
+                    android:background="@color/driver" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/petstore_10_dp"
+                    android:layout_marginBottom="@dimen/petstore_10_dp">
+
+                    <ImageView
+                        android:id="@+id/location_icon"
+                        android:layout_width="@dimen/petstore_15_dp"
+                        android:layout_height="@dimen/petstore_20_dp"
+                        android:src="@mipmap/ic_location" />
+
+                    <TextView
+                        android:id="@+id/auto_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/petstore_5_dp"
+                        android:layout_toRightOf="@id/location_icon"
+                        android:hint="@string/auto_location"
+                        android:textColor="@color/Black" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/petstore_10_dp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/setting_default_address"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_16_sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/petstore_10_dp"
+                    android:text="@string/default_address_description"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_14_sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/default_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/petstore_10_dp"
+                android:layout_marginRight="@dimen/petstore_20_dp"
+                android:checked="false"
+                android:thumb="@drawable/switch_circle_bg"
+                app:track="@drawable/switch_bg" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/save_address"
+        style="@style/btn_normal"
+        android:layout_margin="@dimen/petstore_25_dp"
+        android:text="@string/save_address" />
+</androidx.appcompat.widget.LinearLayoutCompat>

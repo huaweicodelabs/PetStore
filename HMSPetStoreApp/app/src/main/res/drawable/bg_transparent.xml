@@ -1,0 +1,11 @@
+<!-- android:shape指定形状类型，默认为rectangle -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- solid指定形状的填充色，只有android:color一个属性 -->
+    <!--渐变设置-->
+    <gradient
+        android:angle="270"
+        android:endColor="#fa9e9e9e"
+        android:startColor="#00FFFFFF"
+        android:type="linear" />
+</shape>

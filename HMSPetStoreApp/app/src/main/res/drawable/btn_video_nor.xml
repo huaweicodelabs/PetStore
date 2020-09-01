@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <corners android:radius="@dimen/petstore_20_dp" />
+    <!-- 填充的颜色 -->
+    <solid android:color="#242424" />
+
+    <padding
+        android:bottom="@dimen/petstore_6_dp"
+        android:left="@dimen/petstore_20_dp"
+        android:right="@dimen/petstore_20_dp"
+        android:top="@dimen/petstore_6_dp" />
+
+</shape>

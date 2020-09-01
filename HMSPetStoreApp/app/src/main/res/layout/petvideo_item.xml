@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/petstore_5_dp"
+    android:paddingBottom="@dimen/petstore_5_dp">
+
+    <TextView
+        android:id="@+id/petvideo_item_videoName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/petstore_5_dp"
+        android:text="@string/pet_video"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/petstore_text_16_sp"
+        tools:ignore="MissingConstraints" />
+
+    <VideoView
+        android:id="@+id/petvideo_item_videoView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petvideo_item_videoName"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/petvideo_item_fullScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/petstore_10_dp"
+        android:background="@drawable/btn_fullscreen"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_full_screen"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/petvideo_item_videoView"
+        app:layout_constraintTop_toTopOf="@+id/petvideo_item_videoView"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/petvideo_item_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petvideo_item_videoName"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/petvideo_item_startPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_video_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petvideo_item_videoName"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/petstore_5_dp">
+
+    <ImageView
+        android:id="@+id/video_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@mipmap/video_img" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_video_play" />
+
+</RelativeLayout>
+

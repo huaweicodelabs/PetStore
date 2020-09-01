@@ -1,0 +1,47 @@
+maven中心仓配置：
+    <profile>
+      <id>central</id>
+     <repositories>
+		 <repository>
+			 <id>aliyun-repos</id>
+			 <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			 <snapshots>
+			 <enabled>false</enabled>
+			 </snapshots>
+		 </repository>
+	 </repositories>
+
+	 <pluginRepositories>
+		 <pluginRepository>
+			 <id>aliyun-plugin</id>
+			 <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+			 <snapshots>
+			 <enabled>false</enabled>
+			 </snapshots>
+		 </pluginRepository>
+	 </pluginRepositories>
+    </profile>
+
+项目部署指导：
+1、数据库
+	1）下载mysql数据库并安装
+	2）登录使用root登录mysql
+	3）执行脚本petstore.1.0.0.sql，创建用户、数据库及示例表
+2、应用部署
+	windows机器上执行
+	1、cmd模式下进入HMSPetstoreServer目录
+	2、执行如下命令打包
+     mvn install -Dmaven.test.skip=true
+    3、将HMSPetstoreServer/target/petstore.jar文件复制或上传到目标服务器
+    4、启停
+	  linux
+		启动进程命令（端口可以修改）：
+			java -jar Petstore-1.0.0.jar --server.port=7080 &
+		停进程命令：
+			ps -ef|grep store|grep -v grep|awk '{print $2}'|kill -9
+
+	  windows
+		启动进程命令(cmd命令行执行)：
+			java -jar Petstore-1.0.0.jar --server.port=7080 &
+		停进程命令：
+			ctrl +c

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/member_name"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:layout_marginBottom="@dimen/petstore_3_dp"
+        android:textSize="@dimen/petstore_text_16_sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/petstore_10_dp"
+        android:background="@mipmap/card"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/petstore_10_dp">
+
+        <ImageView
+            android:layout_width="@dimen/petstore_40_dp"
+            android:layout_height="@dimen/petstore_40_dp"
+            android:src="@mipmap/member" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/memcenter_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/petstore_10_dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/Grey_800"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+            <TextView
+                android:id="@+id/memcenter_item_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/petstore_10_dp"
+                android:gravity="center_vertical"
+                android:padding="@dimen/petstore_5_dp"
+                android:textColor="@color/Grey_500"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/memcenter_item_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/petstore_5_dp"
+                android:text="1000"
+                android:textColor="@color/Red_800"
+                android:textSize="@dimen/petstore_text_18_sp" />
+            <TextView
+                android:id="@+id/sub_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/petstore_5_dp"
+                android:text="@string/iap_buy_now"
+                android:textColor="@color/White"
+                android:background="@drawable/bg_subscrible"
+                android:textSize="@dimen/petstore_text_14_sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

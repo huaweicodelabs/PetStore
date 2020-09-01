@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/login_logo_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/login_logo"
+        android:contentDescription="@null"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/title_back"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/petstore_48_dp"
+        android:layout_marginTop="@dimen/statusBar_height"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:src="@mipmap/ic_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/petstore_48_dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/statusBar_height"
+        android:fontFamily="SourceHanSansCN-Regular"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/White"
+        android:textSize="@dimen/petstore_text_18_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/login_username"
+        style="@style/input_box"
+        android:layout_height="@dimen/petstore_50_dp"
+        android:layout_marginStart="@dimen/petstore_35_dp"
+        android:layout_marginTop="@dimen/petstore_20_dp"
+        android:layout_marginEnd="@dimen/petstore_20_dp"
+        android:hint="@string/input_username"
+        android:inputType="textPersonName"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:paddingTop="@dimen/petstore_5_dp"
+        android:paddingEnd="@dimen/petstore_10_dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_logo_image"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/petstore_50_dp"
+        android:layout_marginEnd="@dimen/petstore_5_dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_username"
+        app:layout_constraintBottom_toBottomOf="@+id/login_username"
+        app:layout_constraintRight_toLeftOf="@+id/login_username"
+        app:layout_constraintTop_toTopOf="@+id/login_username"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/login_username_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:paddingTop="@dimen/petstore_10_dp"
+        android:paddingEnd="@dimen/petstore_10_dp"
+        android:paddingBottom="@dimen/petstore_5_dp"
+        android:src="@mipmap/ic_circle_cancel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/login_username"
+        app:layout_constraintRight_toRightOf="@+id/login_username"
+        app:layout_constraintTop_toTopOf="@+id/login_username"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/login_password"
+        style="@style/input_box"
+        android:layout_height="@dimen/petstore_50_dp"
+        android:layout_marginStart="@dimen/petstore_35_dp"
+        android:layout_marginTop="@dimen/petstore_10_dp"
+        android:layout_marginEnd="@dimen/petstore_20_dp"
+        android:hint="@string/input_password"
+        android:inputType="textPassword"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:paddingTop="@dimen/petstore_5_dp"
+        android:paddingEnd="@dimen/petstore_10_dp"
+        app:layout_constraintTop_toBottomOf="@+id/login_username"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/petstore_50_dp"
+        android:layout_marginEnd="@dimen/petstore_5_dp"
+        android:contentDescription="@null"
+        android:src="@mipmap/ic_pwd"
+        app:layout_constraintBottom_toBottomOf="@+id/login_password"
+        app:layout_constraintRight_toLeftOf="@+id/login_password"
+        app:layout_constraintTop_toTopOf="@+id/login_password"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/login_password_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:paddingTop="@dimen/petstore_10_dp"
+        android:paddingEnd="@dimen/petstore_10_dp"
+        android:paddingBottom="@dimen/petstore_5_dp"
+        android:src="@mipmap/ic_circle_cancel"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/login_password"
+        app:layout_constraintRight_toRightOf="@+id/login_password"
+        app:layout_constraintTop_toTopOf="@+id/login_password"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/petstore_10_dp"
+        android:layout_marginEnd="@dimen/petstore_10_dp"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/petstore_15_dp"
+        android:paddingTop="@dimen/petstore_5_dp"
+        android:paddingEnd="@dimen/petstore_15_dp"
+        android:paddingBottom="@dimen/petstore_5_dp"
+        android:text="@string/btn_register"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_login"
+        style="@style/btn_normal"
+        android:layout_margin="@dimen/petstore_20_dp"
+        android:text="@string/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/login_register"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/login_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/petstore_15_dp"
+        android:textSize="@dimen/petstore_text_10_sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_login"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/login_otherLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/other_login_methods"
+        android:textSize="@dimen/petstore_text_12_sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_agreement"
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:layout_width="@dimen/petstore_50_dp"
+        android:layout_height="@dimen/petstore_1_dp"
+        android:layout_marginStart="@dimen/petstore_10_dp"
+        android:background="@color/driver"
+        app:layout_constraintBottom_toBottomOf="@+id/login_otherLogin"
+        app:layout_constraintLeft_toRightOf="@+id/login_otherLogin"
+        app:layout_constraintTop_toTopOf="@+id/login_otherLogin"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:layout_width="@dimen/petstore_50_dp"
+        android:layout_height="@dimen/petstore_1_dp"
+        android:layout_marginEnd="@dimen/petstore_10_dp"
+        android:background="@color/driver"
+        app:layout_constraintBottom_toBottomOf="@+id/login_otherLogin"
+        app:layout_constraintRight_toLeftOf="@+id/login_otherLogin"
+        app:layout_constraintTop_toTopOf="@+id/login_otherLogin"
+        tools:ignore="MissingConstraints" />
+
+    <com.huawei.hms.support.hwid.ui.HuaweiIdAuthButton
+        android:id="@+id/hwid_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_otherLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_otherLogin"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

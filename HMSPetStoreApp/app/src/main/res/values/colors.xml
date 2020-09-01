@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1890FF</color>
+    <color name="colorPrimaryDark">#007CEC</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+    <color name="title_bg">@color/White</color>
+    <color name="title_text">@color/Black</color>
+    <color name="petstore_white">@color/White</color>
+    <color name="petstore_black">#2c2c2c</color>
+    <color name="color_common_backgroud">#F0F0F0</color>
+    <color name="transparent">#00000000</color>
+
+
+    <color name="bar_color_checked">#3F3F4A</color>
+    <color name="bar_color_unchecked">#8E8E93</color>
+    <color name="driver">#dedede</color>
+
+    <color name="theme">#1890FF</color>
+    <color name="theme_dark">#007CEC</color>
+</resources>

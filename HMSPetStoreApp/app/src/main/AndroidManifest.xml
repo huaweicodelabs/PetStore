@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.huawei.hmspetstore">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARES_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name=".ui.main.MainAct"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.login.RegisterAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.login.LoginAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.login.VerifyAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.center.MemberCenterAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.setting.SettingAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.order.OrderAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.address.AddressAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.petstore.PetStoreSearchActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.petstore.PetStoreSearchDetailActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.petstore.PetStoreNearbySearchActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.mine.MineCenterAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <!--地址管理界面-->
+        <activity
+            android:name=".ui.address.AddAddressManageAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.petvideo.PetVideoAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.petvideo.VideoPlayAct"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity" />
+
+        <activity
+            android:name=".ui.push.InnerMessageCenter"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="com.huawei.hmspetstore.innermessage" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".ui.push.PushService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".ui.petstore.receiver.GeoFenceBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.huawei.hmspetstore.ui.petstore.GeoFenceBroadcastReceiver.ACTION_PROCESS_LOCATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

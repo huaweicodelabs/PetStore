@@ -1,0 +1,268 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.6.RELEASE</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.huawei.hms</groupId>
+	<artifactId>Petstore</artifactId>
+	<version>${sub.version}</version>
+	<packaging>jar</packaging>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<spring.boot.version>2.1.6.RELEASE</spring.boot.version>
+		<log4j.version>2.12.0</log4j.version>
+		<slf4j.version>1.7.26</slf4j.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.build.filename>${project.version}</maven.build.filename>
+		<package_version>${project.version}.${current.time}</package_version>
+		<jarName>petstore</jarName>
+		<service.name>Petstore</service.name>
+		<maven.compile.source>1.8</maven.compile.source>
+		<maven.compile.target>1.8</maven.compile.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.framework.version>5.1.5.RELEASE</spring.framework.version>
+		<sub.version>1.0.0</sub.version>
+		<format.type>zip</format.type>
+		<upgrade.name>${service.name}_Upgrade</upgrade.name>
+		<maven.build.packagefilename>${service.name}_${package_version}</maven.build.packagefilename>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-jcl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-1.2-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.google.protobuf</groupId>
+					<artifactId>protobuf-java</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-log4j2</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jul-to-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.commons</groupId>
+					<artifactId>commons-pool2</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.0.14.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.62</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.nimbusds</groupId>
+			<artifactId>nimbus-jose-jwt</artifactId>
+			<version>7.8</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+					<mainClass>com.huawei.hms.petstore.starter.PetstoreBootApplication</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/**</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+		<finalName>${jarName}</finalName>
+	</build>
+</project>

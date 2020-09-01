@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/petstore_48_dp"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@null"
+            android:fontFamily="SourceHanSansCN-Regular"
+            android:paddingStart="@dimen/petstore_10_dp"
+            android:paddingEnd="@dimen/petstore_10_dp"
+            android:src="@mipmap/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="SourceHanSansCN-Regular"
+            android:gravity="center"
+            android:text="@string/setting"
+            android:textColor="@color/petstore_black"
+            android:textSize="@dimen/petstore_text_18_sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/petstore_15_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/petstore_15_dp"
+                    android:text="@string/head_img"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_16_sp" />
+
+
+                <ImageView
+                    android:id="@+id/setting_headimg"
+                    android:layout_width="@dimen/petstore_60_dp"
+                    android:layout_height="@dimen/petstore_60_dp"
+                    android:layout_margin="@dimen/petstore_10_dp"
+                    android:src="@mipmap/ic_launcher_round" />
+
+            </LinearLayout>
+
+            <include layout="@layout/view_line_start_10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/petstore_15_dp"
+                    android:text="@string/nick_name"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_16_sp" />
+
+                <TextView
+                    android:id="@+id/setting_nickName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right|center_vertical"
+                    android:paddingStart="@dimen/petstore_10_dp"
+                    android:paddingTop="@dimen/petstore_10_dp"
+                    android:paddingEnd="@dimen/petstore_25_dp"
+                    android:paddingBottom="@dimen/petstore_10_dp"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_14_sp" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_line_1dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petstore_15_dp" />
+
+            <LinearLayout
+                android:id="@+id/setting_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/petstore_15_dp"
+                    android:text="@string/address_manage"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_16_sp" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/petstore_10_dp"
+                    android:src="@mipmap/ic_more" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_line_1dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petstore_15_dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/petstore_5_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/petstore_15_dp"
+                    android:text="@string/login_with_fingerprint"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_16_sp" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_fingerprint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/petstore_10_dp"
+                    android:checked="false"
+                    android:thumb="@drawable/switch_circle_bg"
+                    app:track="@drawable/switch_bg" />
+
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_line_1dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petstore_15_dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/petstore_5_dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/petstore_15_dp"
+                    android:text="@string/accept_news"
+                    android:textColor="@color/petstore_black"
+                    android:textSize="@dimen/petstore_text_16_sp" />
+
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/setting_news"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/petstore_10_dp"
+                    android:checked="true"
+                    android:thumb="@drawable/switch_circle_bg"
+                    app:track="@drawable/switch_bg" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/setting_exit"
+        style="@style/btn_normal"
+        android:layout_margin="@dimen/petstore_25_dp"
+        android:text="@string/btn_exit_login" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

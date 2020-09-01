@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/mainPage_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:contentDescription="@null"
+                    android:fontFamily="SourceHanSansCN-Regular"
+                    android:paddingEnd="@dimen/petstore_10_dp"
+                    android:src="@mipmap/ic_back"
+                    android:textColor="#36383c" />
+
+                <SearchView
+                    android:id="@+id/mainPage_searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/search_gb"
+                    android:iconifiedByDefault="false"
+                    android:queryBackground="@null"
+                    android:queryHint="@string/input_search_hint" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/driver" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/petstore_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/pb_loading"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>

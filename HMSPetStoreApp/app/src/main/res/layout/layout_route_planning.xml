@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_route_driving"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_selector"
+        android:scaleType="center"
+        android:src="@mipmap/route_driving" />
+
+    <ImageView
+        android:id="@+id/img_route_bicycling"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_selector"
+        android:scaleType="center"
+        android:src="@mipmap/route_bicycling"/>
+
+    <ImageView
+        android:id="@+id/img_route_walking"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_selector"
+        android:scaleType="center"
+        android:src="@mipmap/route_walking" />
+
+    <ImageView
+        android:id="@+id/view_root"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_shape"
+        android:scaleType="center"
+        android:src="@mipmap/route_root"/>
+
+</FrameLayout>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/petstore_48_dp"
+        android:background="@color/title_bg">
+
+        <ImageView
+            android:id="@+id/title_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@null"
+            android:fontFamily="SourceHanSansCN-Regular"
+            android:paddingStart="@dimen/petstore_10_dp"
+            android:paddingEnd="@dimen/petstore_10_dp"
+            android:src="@mipmap/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="SourceHanSansCN-Regular"
+            android:gravity="center"
+            android:text="@string/store_detail"
+            android:textColor="@color/petstore_black"
+            android:textSize="@dimen/petstore_text_18_sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/petstore_93_dp"
+            android:layout_height="@dimen/petstore_93_dp">
+
+            <ImageView
+                android:id="@+id/petstore_img"
+                android:layout_width="@dimen/petstore_60_dp"
+                android:layout_height="@dimen/petstore_60_dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_pet_store" />
+
+            <TextView
+                android:id="@+id/petstore_auth"
+                android:layout_width="@dimen/petstore_60_dp"
+                android:layout_height="@dimen/petstore_20_dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/petstore_5_dp"
+                android:background="@drawable/tv_platform_auth"
+                android:gravity="center"
+                android:text="@string/platform_auth"
+                android:textColor="@color/petstore_white"
+                android:textSize="@dimen/petstore_text_10_sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/petstore_name"
+            android:layout_width="@dimen/petstore_0_dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="@dimen/petstore_5_dp"
+            android:text=""
+            android:textColor="@color/petstore_black"
+            android:textSize="@dimen/petstore_text_16_sp" />
+
+        <TextView
+            android:id="@+id/petstore_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@mipmap/ic_attention"
+            android:drawablePadding="@dimen/petstore_5_dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/petstore_10_dp"
+            android:text="@string/add_follow"
+            android:textColor="@color/Grey_700"
+            android:textSize="@dimen/petstore_text_14_sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/petstore_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:paddingEnd="@dimen/petstore_10_dp"
+        android:text=""
+        android:textColor="@color/Grey_900"
+        android:textSize="@dimen/petstore_text_14_sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/petstore_0_dp"
+        android:layout_marginTop="@dimen/petstore_15_dp"
+        android:layout_weight="1">
+
+        <com.huawei.hms.maps.MapView
+            android:id="@+id/mapview_mapviewdemo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:mapType="normal"
+            map:uiCompass="true"
+            map:uiZoomControls="true"
+            map:zOrderOnTop="false" />
+
+        <com.huawei.hmspetstore.view.RoutePlanningExpandView
+            android:id="@+id/view_route_planning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/petstore_10_dp"
+            android:paddingEnd="@dimen/petstore_12_dp" />
+
+        <com.huawei.hmspetstore.view.MapStyleExpandView
+            android:id="@+id/view_map_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_route_planning"
+            android:layout_marginTop="@dimen/petstore_10_dp"
+            android:paddingEnd="@dimen/petstore_12_dp" />
+
+        <ImageView
+            android:id="@+id/img_search_nearby"
+            android:layout_width="@dimen/petstore_40_dp"
+            android:layout_height="@dimen/petstore_40_dp"
+            android:layout_below="@+id/view_map_style"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/petstore_10_dp"
+            android:layout_marginEnd="@dimen/petstore_10_dp"
+            android:background="@drawable/bg_circle_view_shape"
+            android:scaleType="center"
+            android:src="@mipmap/mapplace_near" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_time_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="@dimen/petstore_10_dp"
+            android:text=""
+            android:textColor="@color/petstore_black"
+            android:textSize="@dimen/petstore_text_16_sp" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:padding="@dimen/petstore_10_dp"
+            android:text=""
+            android:textColor="@color/petstore_black"
+            android:textSize="@dimen/petstore_text_16_sp" />
+    </LinearLayout>
+</LinearLayout>

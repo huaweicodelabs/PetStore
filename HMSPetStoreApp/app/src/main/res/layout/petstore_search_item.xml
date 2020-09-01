@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/petstore_10_dp"
+    android:paddingBottom="@dimen/petstore_10_dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/petstore_15_dp"
+        android:paddingEnd="@dimen/petstore_15_dp">
+
+        <ImageView
+            android:id="@+id/petstore_item_img"
+            android:layout_width="@dimen/petstore_60_dp"
+            android:layout_height="@dimen/petstore_60_dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_item_head" />
+
+        <TextView
+            android:id="@+id/petstore_item_auth"
+            android:layout_width="@dimen/petstore_60_dp"
+            android:layout_height="@dimen/petstore_20_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/tv_platform_auth"
+            android:gravity="center"
+            android:text="@string/platform_auth"
+            android:textColor="@color/petstore_white"
+            android:textSize="@dimen/petstore_text_10_sp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/petstore_0_dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/petstore_item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/petstore_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:padding="@dimen/petstore_5_dp"
+                android:textColor="@color/petstore_black"
+                android:textSize="@dimen/petstore_text_16_sp" />
+
+            <TextView
+                android:id="@+id/petstore_item_paid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/petstore_5_dp"
+                android:background="@drawable/tv_platform_status"
+                android:gravity="center"
+                android:paddingStart="@dimen/petstore_5_dp"
+                android:paddingTop="@dimen/petstore_2_dp"
+                android:paddingEnd="@dimen/petstore_5_dp"
+                android:paddingBottom="@dimen/petstore_2_dp"
+                android:text="@string/paid_deposit"
+                android:textColor="@color/petstore_white"
+                android:textSize="@dimen/petstore_text_10_sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/petstore_item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/petstore_item_container"
+            android:gravity="center_vertical"
+            android:padding="@dimen/petstore_5_dp"
+            android:textColor="@color/Grey_800"
+            android:textSize="@dimen/petstore_text_14_sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/petstore_item_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:padding="@dimen/petstore_10_dp"
+        android:textColor="@color/Grey_500"
+        android:textSize="14sp" />
+</LinearLayout>

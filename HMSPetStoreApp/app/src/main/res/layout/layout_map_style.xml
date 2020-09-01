@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/img_style_night"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_selector"
+        android:scaleType="center"
+        android:src="@mipmap/mapstyle_night" />
+
+    <ImageView
+        android:id="@+id/img_style_simple"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_selector"
+        android:scaleType="center"
+        android:src="@mipmap/mapstyle_simple" />
+
+    <ImageView
+        android:id="@+id/img_style_default"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_selector"
+        android:scaleType="center"
+        android:src="@mipmap/mapstyle_default" />
+
+    <ImageView
+        android:id="@+id/view_root"
+        android:layout_width="@dimen/petstore_40_dp"
+        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_gravity="end"
+        android:background="@drawable/bg_circle_view_shape"
+        android:scaleType="center"
+        android:src="@mipmap/mapstyle_root"/>
+
+</FrameLayout>

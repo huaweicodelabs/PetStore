@@ -39,4 +39,4 @@
 ![image](https://github.com/huaweicodelabs/PetStore/blob/master/HMSPetStoreApp/QR%20Code%20Of%20HMSPetStoreApp.png)
 
 ## License
-    The sample of PetStore has obtained the [Apache 2.0 license.](http://www.apache.org/licenses/LICENSE-2.0).
+    The sample of PetStore has obtained the [Apache 2.0 license.](https://www.apache.org/licenses/LICENSE-2.0).

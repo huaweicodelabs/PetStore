@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
+import com.huawei.agconnect.config.AGConnectServicesConfig;
 import com.huawei.hmspetstore.R;
 import com.huawei.hmspetstore.constant.SPConstants;
 import com.huawei.hmspetstore.ui.address.AddAddressManageAct;
@@ -126,8 +127,10 @@ public class MineCenterAct extends AppCompatActivity {
         findViewById(R.id.sub_manage).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String appid = AGConnectServicesConfig.fromContext(MineCenterAct.this).getString("client/app_id");
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("pay://com.huawei.hwid.external/subscriptions?package=com.huawei.hmspetstore&appid=101778417&sku=subscribeMember01"));
+                String url = "pay://com.huawei.hwid.external/subscriptions?package=com.huawei.hmspetstore&appid=" + appid + "&sku=subscribeMember01";
+                intent.setData(Uri.parse(url));
                 startActivity(intent);
             }
         });
@@ -194,9 +197,9 @@ public class MineCenterAct extends AppCompatActivity {
         if (MemberRight.isVideoAvailableForever(this)) {
             mTvMembers.setVisibility(View.GONE);
         } else if (MemberRight.isVideoSubscriptionValid(this)) {
-            mTvMembers.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("YYYY-MM-dd", Locale.US).format(MemberRight.getVideoSubscriptionExpireDate(this))));
+            mTvMembers.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getVideoSubscriptionExpireDate(this))));
         } else if (MemberRight.isVideoAvailable(this)) {
-            mTvMembers.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("YYYY-MM-dd", Locale.US).format(MemberRight.getNormalVideoExpireDate(this))));
+            mTvMembers.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getNormalVideoExpireDate(this))));
         }
 
         // 会员状态显示
@@ -204,11 +207,11 @@ public class MineCenterAct extends AppCompatActivity {
             mTvMembersTime.setText(R.string.iap_buy_forever);
             mTvMembers.setVisibility(View.GONE);
         } else if (MemberRight.isVideoSubscriptionValid(this)) {
-            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("YYYY-MM-dd", Locale.US).format(MemberRight.getVideoSubscriptionExpireDate(this))));
+            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getVideoSubscriptionExpireDate(this))));
             mTvMembers.setVisibility(View.GONE);
         } else if (MemberRight.isVideoAvailable(this)) {
             mTvMembers.setVisibility(View.GONE);
-            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("YYYY-MM-dd", Locale.US).format(MemberRight.getNormalVideoExpireDate(this))));
+            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getNormalVideoExpireDate(this))));
         } else {
             mTvMembers.setVisibility(View.VISIBLE);
         }

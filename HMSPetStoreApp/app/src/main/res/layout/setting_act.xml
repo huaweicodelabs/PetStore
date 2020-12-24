@@ -73,7 +73,7 @@
                     android:layout_width="@dimen/petstore_60_dp"
                     android:layout_height="@dimen/petstore_60_dp"
                     android:layout_margin="@dimen/petstore_10_dp"
-                    android:src="@mipmap/ic_launcher_round" />
+                    android:src="@mipmap/ic_login_login" />
 
             </LinearLayout>
 
@@ -111,10 +111,7 @@
 
             </LinearLayout>
 
-            <include
-                layout="@layout/view_line_1dp"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/petstore_15_dp" />
+            <include layout="@layout/view_line_start_10dp" />
 
             <LinearLayout
                 android:id="@+id/setting_address"
@@ -143,10 +140,7 @@
 
             </LinearLayout>
 
-            <include
-                layout="@layout/view_line_1dp"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/petstore_15_dp" />
+            <include layout="@layout/view_line_start_10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -179,10 +173,7 @@
 
             </LinearLayout>
 
-            <include
-                layout="@layout/view_line_1dp"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/petstore_15_dp" />
+            <include layout="@layout/view_line_start_10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

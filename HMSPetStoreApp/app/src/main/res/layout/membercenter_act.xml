@@ -52,6 +52,7 @@
             android:src="@mipmap/ic_login_login" />
 
         <TextView
+            android:id="@+id/membercenter_nickname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

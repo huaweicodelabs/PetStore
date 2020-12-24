@@ -125,6 +125,7 @@
         android:layout_below="@+id/register_password_double"
         android:layout_margin="@dimen/petstore_20_dp"
         android:text="@string/btn_register"
+        android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@+id/register_password_double"
         tools:ignore="MissingConstraints" />
 
@@ -135,6 +136,8 @@
         android:layout_below="@+id/register_register"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/petstore_15_dp"
+        android:paddingStart="@dimen/petstore_10_dp"
+        android:paddingEnd="@dimen/petstore_10_dp"
         android:textSize="@dimen/petstore_text_10_sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -236,15 +236,11 @@ public class AddressAct extends AppCompatActivity {
                 String name = mEtName.getText().toString().trim();
                 String phone = mEtPhone.getText().toString().trim();
                 if (TextUtils.isEmpty(name)) {
-                    ToastUtil.getInstance().showShort(AddressAct.this, R.string.please_input_name);
+                    ToastUtil.getInstance().showShort(AddressAct.this, R.string.toast_address_input);
                     return;
                 }
                 if (TextUtils.isEmpty(phone)) {
-                    ToastUtil.getInstance().showShort(AddressAct.this, R.string.please_input_phone);
-                    return;
-                }
-                if (!TextUtils.isEmpty(phone) && phone.length() < 11) {
-                    ToastUtil.getInstance().showShort(AddressAct.this, R.string.toast_mobile_number_incorrect);
+                    ToastUtil.getInstance().showShort(AddressAct.this, R.string.toast_address_input);
                     return;
                 }
                 String inputAddress = mEtAddress.getText().toString().trim();
@@ -286,7 +282,16 @@ public class AddressAct extends AppCompatActivity {
         addressBean.setName(name);
         addressBean.setAddress(address);
         addressBean.setDefault(isDefault);
-        addressList.add(addressBean);
+        if (isDefault) {
+            if (addressList.size() > 0) {
+                for (int i = 0; i < addressList.size(); i++) {
+                    addressList.get(i).setDefault(false);
+                }
+            }
+            addressList.add(0, addressBean);
+        } else {
+            addressList.add(addressBean);
+        }
         SPUtil.saveDataList(this, SPConstants.TAG_ADDRESS_LIST, addressList);
         finish();
     }

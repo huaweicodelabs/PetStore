@@ -87,11 +87,27 @@ public class RegisterAct extends AppCompatActivity {
         // 富文本设置用户协议和隐私政策
         TextView mTvAgreement = findViewById(R.id.register_agreement);
         String content = getString(R.string.agreement_privacy);
-        int length = content.length();
-        SpannableString mSpannableString = new SpannableString(content);
-        mSpannableString.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimary)), length - 6, length, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
-        mSpannableString.setSpan(new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimary)), length - 13, length - 7, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        SpannableString mSpannableString = getSpannableString(content);
         mTvAgreement.setText(mSpannableString);
+    }
+
+    private SpannableString getSpannableString(String content) {
+        // 点注册/登录代表同意宠物市场《用户协议》和《隐私政策》
+        // Touching Sign in or Sign up means that you agree with the User Agreement and Privacy Statement of this app.
+        SpannableString mSpannableString = new SpannableString(content);
+        ForegroundColorSpan colorSpan = new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimary));
+        if (content.contains("隐私政策")) {
+            mSpannableString.setSpan(colorSpan, 21, 27, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        } else if (content.contains("Privacy Statement")) {
+            mSpannableString.setSpan(colorSpan, 77, 94, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        }
+        ForegroundColorSpan colorSpan2 = new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimary));
+        if (content.contains("用户协议")) {
+            mSpannableString.setSpan(colorSpan2, 14, 20, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        } else if (content.contains("User Agreement")) {
+            mSpannableString.setSpan(colorSpan2, 58, 72, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        }
+        return mSpannableString;
     }
 
     /**

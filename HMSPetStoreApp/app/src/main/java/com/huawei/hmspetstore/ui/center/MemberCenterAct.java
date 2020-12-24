@@ -10,6 +10,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -116,7 +117,8 @@ public class MemberCenterAct extends AppCompatActivity {
 
     // 头像
     private ImageView mIvHeadImg;
-
+    // 昵称
+    private TextView mTvNickName;
     // 列表
     private RecyclerView mRecyclerView;
 
@@ -387,6 +389,11 @@ public class MemberCenterAct extends AppCompatActivity {
      * 初始化View
      */
     private void initView() {
+        mTvNickName = findViewById(R.id.membercenter_nickname);
+        String nickName = (String) SPUtil.get(this, SPConstants.KEY_NICK_NAME, getString(R.string.login_login));
+        // 昵称
+        mTvNickName.setText(nickName);
+
         mIvHeadImg = findViewById(R.id.member_headImg);
         // 初始化RecyclerView
         mRecyclerView = findViewById(R.id.membercenter_recyclerView);

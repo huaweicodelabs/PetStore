@@ -417,6 +417,7 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
         // 点击按钮之后修改按钮颜色
         isClickedCollection = true;
         mTvPetStoreCollection.setTextColor(getResources().getColor(R.color.Blue_600));
+        mTvPetStoreCollection.setText(getString(R.string.add_follow));
         Log.i(TAG, "begin to create Geofence");
         pendingIntent = getPendingIntent();
         geofenceList = new ArrayList<>();
@@ -450,6 +451,7 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
         ToastUtil.getInstance().showShort(PetStoreSearchDetailActivity.this, getString(R.string.toast_cancel_collection));
         // 取消收藏时，将收藏按钮恢复成正常状态
         mTvPetStoreCollection.setTextColor(getResources().getColor(R.color.Grey_700));
+        mTvPetStoreCollection.setText(getString(R.string.add_follow));
         isClickedCollection = false;
         // 移除地理围栏
         idList = new ArrayList<>();

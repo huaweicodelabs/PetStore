@@ -144,7 +144,6 @@ public class LoginAct extends AppCompatActivity implements View.OnClickListener 
         // 富文本设置用户协议和隐私政策
         TextView mTvAgreement = findViewById(R.id.login_agreement);
         String content = getString(R.string.agreement_privacy);
-
         SpannableString mSpannableString = getSpannableString(content);
         mTvAgreement.setText(mSpannableString);
     }
@@ -159,10 +158,12 @@ public class LoginAct extends AppCompatActivity implements View.OnClickListener 
         } else if (content.contains("Privacy Statement")) {
             mSpannableString.setSpan(colorSpan, 77, 94, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
         }
+        ForegroundColorSpan colorSpan2 = new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimary));
         if (content.contains("用户协议")) {
-            mSpannableString.setSpan(colorSpan, 14, 20, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+
+            mSpannableString.setSpan(colorSpan2, 14, 20, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
         } else if (content.contains("User Agreement")) {
-            mSpannableString.setSpan(colorSpan, 58, 72, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+            mSpannableString.setSpan(colorSpan2, 58, 72, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
         }
         return mSpannableString;
     }

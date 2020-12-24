@@ -11,16 +11,16 @@
     </string-array>
 
     <string-array name="numbers">
-        <item>零</item>
-        <item>一</item>
-        <item>二</item>
-        <item>三</item>
-        <item>四</item>
-        <item>五</item>
-        <item>六</item>
-        <item>七</item>
-        <item>八</item>
-        <item>九</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
 
     <string-array name="units">
@@ -115,6 +115,8 @@
     <string name="huawei_sign_out">退出华为账号</string>
     <string name="huawei_sign_out_desc">您当前使用华为账号登录，请确认是否需要退出华为账号</string>
 
+    <string name="search_distance">%1$skm</string>
+    <string name="less_than_one">&lt;1km</string>
     <string name="nearby">附近</string>
     <string name="mill">&lt; 1000m</string>
     <string name="platform_auth">平台认证</string>
@@ -214,8 +216,11 @@
     <string name="save_address">保存地址</string>
     <string name="add_address">添加</string>
     <string name="add_follow">关注</string>
+    <string name="has_follow">关注</string>
     <string name="default_address_flag">默认</string>
     <string name="toast_mobile_number_incorrect">手机号码格式不正确</string>
     <string name="toast_please_add_address">请添加收货地址</string>
+    <string name="toast_address_input">填写相关信息</string>
+    <string name="toast_fingerpring_open_fail">指纹登录打开失败</string>
 
 </resources>

@@ -20,7 +20,7 @@ public class OrderBean implements Serializable {
     private long price;
 
     public OrderBean(Context context, InAppPurchaseData inAppPurchaseData) {
-        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd");
+        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/YYYY");
         this.time = dateFormat.format(new Date(inAppPurchaseData.getPurchaseTime()));
         this.status = getStatusDesc(context, inAppPurchaseData.getPurchaseState());
         this.name = inAppPurchaseData.getProductName();

@@ -59,9 +59,10 @@ public class PetStoreSearchAdapter extends RecyclerView.Adapter<PetStoreSearchAd
 
         double distance = mPetStoreBean.getDistance();
         if (distance < 1000) {
-            holder.distance.setText("<1km");
+            holder.distance.setText(holder.distance.getContext().getString(R.string.less_than_one));
         } else {
-            holder.distance.setText((int) (distance / 1000) + "km");
+            String distanceStr = String.format(holder.distance.getContext().getString(R.string.search_distance), String.valueOf((int) (distance / 1000)));
+            holder.distance.setText(distanceStr);
         }
 
         if (listener != null) {

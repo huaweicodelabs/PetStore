@@ -98,7 +98,7 @@
                 android:layout_marginLeft="@dimen/petstore_20_dp"
                 android:background="@null"
                 android:enabled="true"
-                android:inputType="number"
+                android:inputType="phone"
                 android:hint="@string/please_input_phone"
                 android:textColor="@color/Black"
                 android:textSize="@dimen/petstore_text_14_sp" />
@@ -171,14 +171,17 @@
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
+                android:layout_weight="1"
                 android:layout_marginLeft="@dimen/petstore_10_dp"
                 android:orientation="vertical">
 
@@ -211,7 +214,7 @@
                 android:checked="false"
                 android:thumb="@drawable/switch_circle_bg"
                 app:track="@drawable/switch_bg" />
-        </RelativeLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton

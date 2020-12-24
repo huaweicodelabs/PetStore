@@ -184,7 +184,9 @@ public class SettingAct extends AppCompatActivity {
 
                         @Override
                         public void onError(String errorMsg) {
+                            // 指纹登录打开失败
                             SPUtil.put(SettingAct.this, SPConstants.FINGER_PRINT_LOGIN_SWITCH, false);
+                            ToastUtil.getInstance().showShort(SettingAct.this,getString(R.string.toast_fingerpring_open_fail));
                             mSwitchCompatFingerPrintLogin.setChecked(false);
                         }
                     });

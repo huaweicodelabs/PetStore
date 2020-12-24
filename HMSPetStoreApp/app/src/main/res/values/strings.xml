@@ -6,16 +6,16 @@
     </string-array>
 
     <string-array name="numbers">
-        <item>Zero</item>
-        <item>One</item>
-        <item>Two</item>
-        <item>Three</item>
-        <item>Four</item>
-        <item>Five</item>
-        <item>Six</item>
-        <item>Seven</item>
-        <item>Eight</item>
-        <item>Nine</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
     </string-array>
 
     <string-array name="units">
@@ -31,9 +31,9 @@
         <item>Ten</item>
     </string-array>
 
-    <string name="app_name">HMSPetStoreApp</string>
+    <string name="app_name">Pet Shop</string>
     <string name="city">Nanjing, China</string>
-    <string name="MC">Message Center</string>
+    <string name="MC">Message center</string>
     <string name="home">Home</string>
     <string name="shoppingCart">Cart</string>
     <string name="mine">Me</string>
@@ -106,10 +106,12 @@
     <string name="input_search_hint">Search</string>
     <string name="pet_video">Pet videos</string>
     <string name="main_item_name">Mr Smith\'s Pet Shop</string>
-    <string name="main_item_distance">1000m</string>
+    <string name="main_item_distance">1000 m</string>
     <string name="verify_code">Send</string>
     <string name="verify_gain">Obtaining the verification code...</string>
 
+    <string name="search_distance">%1$s km</string>
+    <string name="less_than_one">&lt; 1km</string>
     <string name="nearby">Nearby</string>
     <string name="mill">&lt; 1000m</string>
     <string name="platform_auth">Verified</string>
@@ -140,8 +142,8 @@
     <string name="toast_password_error">Incorrect password.</string>
     <string name="toast_userdetect_error">Your account didn\'t pass the fake user test.</string>
     <string name="toast_into_geofence">You have entered the geofence.</string>
-    <string name="toast_collection">Followed successfully.</string>
-    <string name="toast_cancel_collection">Unfollow.</string>
+    <string name="toast_collection">Successfully followed the shop.</string>
+    <string name="toast_cancel_collection">Successfully unfollowed the shop.</string>
 
     <string name="toast_account">Welcome to Account Kit.</string>
     <string name="toast_account_verifycode">Welcome to Account Kit (SMS verification code autofill).</string>
@@ -165,7 +167,7 @@
     <string name="btn_login">Sign in</string>
     <string name="btn_look_more">View more</string>
     <string name="btn_exit_login">Sign out</string>
-    <string name="btn_register">This user already exists.</string>
+    <string name="btn_register">Sign up</string>
     <string name="btn_confirm">OK</string>
     <string name="other_login_methods">Quick sign-in</string>
     <string name="loading_desc">Loading...</string>
@@ -177,25 +179,25 @@
     <string name="btn_yes">Yes</string>
     <string name="btn_no">No</string>
 
-    <string name="iap_buy_now"></string>
+    <string name="iap_buy_now">Buy now</string>
     <string name="iap_not_support">IAP currently unsupported.</string>
     <string name="iap_pls_login">Sign in to your HUAWEI ID first.</string>
     <string name="iap_request_fail">Request failed.</string>
     <string name="iap_buy_fail">Payment failed.</string>
     <string name="iap_buy_already">Already been purchased. Refresh the page.</string>
-    <string name="iap_sub_manage">Renewal</string>
+    <string name="iap_sub_manage">Renewals</string>
     <string name="iap_buy_done">Completed</string>
     <string name="iap_buy_cancel">Canceled</string>
     <string name="iap_buy_refund">Refunded</string>
-    <string name="iap_member_valid">Validity period: %1$s</string>
+    <string name="iap_member_valid">Expiration date: %1$s</string>
     <string name="iap_buy_forever">Permanent</string>
     <string name="iap_buy_subscription">Auto-renew</string>
-    <string name="iap_buy_member_forever">Permanent membership</string>
-    <string name="iap_buy_member_subscription">Subscription member</string>
+    <string name="iap_buy_member_forever">Lifetime of free videos</string>
+    <string name="iap_buy_member_subscription">Ongoing free videos</string>
     <string name="iap_buy_member">Ordinary member</string>
     <string name="iap_product_not_support">The product location and HUAWEI ID location do not match.</string>
-    <string name="iap_note_title">IAP</string>
-    <string name="iap_note_desc">Note: You\'ll now go to the payment confirmation screen. Before confirming the payment, make sure that you have added your account to the sandbox testing environment. Otherwise, actual payments may be made.</string>
+    <string name="iap_note_title">A tip from HUAWEI IAP</string>
+    <string name="iap_note_desc">You\'ll now go to the payment confirmation screen. Before confirming the payment, make sure that you have added your account to the sandbox testing environment. Otherwise, actual payments may be made.</string>
 
 
     <string name="title_add_address">Add an address</string>
@@ -211,8 +213,11 @@
     <string name="save_address">Save</string>
     <string name="add_address">Add</string>
     <string name="add_follow">Follow</string>
+    <string name="has_follow">Following</string>
     <string name="default_address_flag">Default</string>
     <string name="toast_mobile_number_incorrect">Incorrect mobile number format.</string>
     <string name="toast_please_add_address">Add an address.</string>
+    <string name="toast_address_input">Fill in required information.</string>
+    <string name="toast_fingerpring_open_fail">Failed to enable fingerprint sign-in.</string>
 
 </resources>

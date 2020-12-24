@@ -46,6 +46,7 @@
                 style="@style/btn_normal"
                 android:layout_width="@dimen/petstore_100_dp"
                 android:layout_height="@dimen/petstore_40_dp"
+                android:textAllCaps="false"
                 android:background="@drawable/btn_nearby"
                 android:text="@string/btn_contuine"
                 android:textColor="@color/petstore_black" />
@@ -64,6 +65,7 @@
                 style="@style/btn_normal"
                 android:layout_width="@dimen/petstore_100_dp"
                 android:layout_height="@dimen/petstore_40_dp"
+                android:textAllCaps="false"
                 android:background="@drawable/btn_green"
                 android:text="@string/btn_cancel" />
 

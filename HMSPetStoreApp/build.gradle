@@ -2,10 +2,10 @@
 
 buildscript {
     repositories {
-        // 添加华为maven仓库
-        maven { url 'https://developer.huawei.com/repo/' }
         google()
         jcenter()
+        // 添加华为maven仓库
+        maven { url 'https://developer.huawei.com/repo/' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
@@ -18,10 +18,10 @@ buildscript {
 
 allprojects {
     repositories {
-        // 添加华为maven仓库
-        maven { url 'https://developer.huawei.com/repo/' }
         google()
         jcenter()
+        // 添加华为maven仓库
+        maven { url 'https://developer.huawei.com/repo/' }
     }
 }
 

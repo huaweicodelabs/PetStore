@@ -14,6 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 import com.huawei.hmspetstore.R;
 import com.huawei.hmspetstore.ui.petvideo.fragment.CollectionFragment;
+import com.huawei.hmspetstore.ui.petvideo.fragment.NewFragment;
 import com.huawei.hmspetstore.ui.petvideo.fragment.RecommendFragment;
 import com.huawei.hmspetstore.util.ToastUtil;
 
@@ -61,6 +62,7 @@ public class PetVideoAct extends AppCompatActivity {
         VideoPagerAdapter myPagerAdapter = new VideoPagerAdapter(getSupportFragmentManager());
         myPagerAdapter.add(CollectionFragment.newInstance());
         myPagerAdapter.add(RecommendFragment.newInstance());
+        myPagerAdapter.add(NewFragment.newInstance());
 
         viewPager.setAdapter(myPagerAdapter);
         VideoChangeListener mPageChangeListener = new VideoChangeListener();
@@ -72,6 +74,9 @@ public class PetVideoAct extends AppCompatActivity {
 
         String second_name = getString(R.string.pet_video_recommend);
         Objects.requireNonNull(tabLayout.getTabAt(1)).setText(second_name);
+
+        String third_name = getString(R.string.pet_video_new);
+        Objects.requireNonNull(tabLayout.getTabAt(2)).setText(third_name);
     }
 
     static class VideoPagerAdapter extends FragmentPagerAdapter {

@@ -6,16 +6,22 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.huawei.hmspetstore.R;
+import com.huawei.hmspetstore.ui.order.adapter.OrderAdapter;
 import com.huawei.hmspetstore.ui.push.innermessage.InnerMessage;
 import com.huawei.hmspetstore.ui.push.innermessage.InnerMessageAdapter;
 import com.huawei.hmspetstore.util.DateUtil;
 import com.huawei.hmspetstore.util.SPUtil;
 import com.huawei.hmspetstore.util.ToastUtil;
+import com.huawei.hmspetstore.view.DividerItemDecoration;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 import static android.view.View.VISIBLE;
@@ -24,7 +30,7 @@ public class InnerMessageCenter extends AppCompatActivity {
 
     private RecyclerView lvInnerMessage;
     InnerMessageAdapter innerMessageAdapter;
-    LinkedList<InnerMessage> messageList = new LinkedList<>();
+    List<InnerMessage> messageList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +79,13 @@ public class InnerMessageCenter extends AppCompatActivity {
             InnerMessage innerMessage = new InnerMessage(context, key, data.get(key));
             messageList.add(innerMessage);
         }
-
         innerMessageAdapter = new InnerMessageAdapter(messageList);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        //设置布局管理器
+        lvInnerMessage.setLayoutManager(manager);
+        //设置为垂直布局，这也是默认的
+        manager.setOrientation(RecyclerView.VERTICAL);
         lvInnerMessage.setAdapter(innerMessageAdapter);
-        innerMessageAdapter.notifyDataSetChanged();
     }
 
     private void initMessage() {

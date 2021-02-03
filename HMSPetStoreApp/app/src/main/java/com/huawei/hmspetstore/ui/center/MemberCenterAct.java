@@ -44,7 +44,6 @@ import com.huawei.hmspetstore.bean.SetMealBean;
 import com.huawei.hmspetstore.common.ICallBack;
 import com.huawei.hmspetstore.common.IRecyclerItemListener;
 import com.huawei.hmspetstore.constant.SPConstants;
-import com.huawei.hmspetstore.ui.address.AddressAct;
 import com.huawei.hmspetstore.ui.center.adapter.MemCenterAdapter;
 import com.huawei.hmspetstore.ui.push.PushConst;
 import com.huawei.hmspetstore.ui.push.PushService;
@@ -420,13 +419,6 @@ public class MemberCenterAct extends AppCompatActivity {
             public void onClick(View v) {
                 // 返回
                 finish();
-            }
-        });
-        findViewById(R.id.add_address_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MemberCenterAct.this, AddressAct.class);
-                startActivity(intent);
             }
         });
         initHeadImg();

@@ -34,7 +34,7 @@
             android:layout_gravity="center"
             android:fontFamily="SourceHanSansCN-Regular"
             android:gravity="center"
-            android:text="@string/order"
+            android:text="@string/orders"
             android:textColor="@color/petstore_black"
             android:textSize="@dimen/petstore_text_18_sp" />
     </RelativeLayout>
@@ -43,12 +43,22 @@
         android:id="@+id/order_topEmpty"
         android:layout_width="match_parent"
         android:layout_height="@dimen/petstore_10_dp"
-        android:visibility="gone"
-        android:background="?android:attr/listDivider" />
+        android:background="?android:attr/listDivider"
+        android:visibility="gone" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/order_recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/order_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/order_list_empty"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/petstore_text_16_sp"
+        android:visibility="gone" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

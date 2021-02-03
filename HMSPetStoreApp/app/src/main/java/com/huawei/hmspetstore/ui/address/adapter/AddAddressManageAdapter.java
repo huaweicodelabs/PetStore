@@ -20,6 +20,11 @@ public class AddAddressManageAdapter extends RecyclerView.Adapter<AddAddressMana
         this.mItems = mItems;
     }
 
+    public void setData(List<AddressBean> mItems){
+        this.mItems = mItems;
+        notifyDataSetChanged();
+    }
+
     public void setListener(IRecyclerItemListener listener) {
         this.listener = listener;
     }

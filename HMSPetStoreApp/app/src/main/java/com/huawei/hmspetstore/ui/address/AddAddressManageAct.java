@@ -2,6 +2,7 @@ package com.huawei.hmspetstore.ui.address;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +17,7 @@ import com.huawei.hmspetstore.R;
 import com.huawei.hmspetstore.bean.AddressBean;
 import com.huawei.hmspetstore.constant.SPConstants;
 import com.huawei.hmspetstore.ui.address.adapter.AddAddressManageAdapter;
+import com.huawei.hmspetstore.util.LoginUtil;
 import com.huawei.hmspetstore.util.SPUtil;
 
 import java.util.List;
@@ -39,7 +41,7 @@ public class AddAddressManageAct extends AppCompatActivity {
         addressList = SPUtil.getDataList(this, SPConstants.TAG_ADDRESS_LIST, AddressBean.class);
         if (addressList.size() == 0) {
             Intent intent = new Intent(AddAddressManageAct.this, AddressAct.class);
-            startActivity(intent);
+            startActivityForResult(intent, 10002);
         }
         //初始化控件
         initViews();
@@ -50,9 +52,8 @@ public class AddAddressManageAct extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        addressList = SPUtil.getDataList(this, SPConstants.TAG_ADDRESS_LIST, AddressBean.class);
-        addressManagementAdapter = new AddAddressManageAdapter(addressList);
-        mRecyclerView.setAdapter(addressManagementAdapter);
+        Log.e("-----", "onResume ");
+
     }
 
     /**
@@ -69,7 +70,7 @@ public class AddAddressManageAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AddAddressManageAct.this, AddressAct.class);
-                startActivity(intent);
+                startActivityForResult(intent, 10002);
             }
         });
     }
@@ -86,8 +87,21 @@ public class AddAddressManageAct extends AppCompatActivity {
         mRecyclerView.setLayoutManager(manager);
         // 设置为垂直布局，这也是默认的
         manager.setOrientation(RecyclerView.VERTICAL);
+        addressManagementAdapter = new AddAddressManageAdapter(addressList);
+        mRecyclerView.setAdapter(addressManagementAdapter);
         //返回键
         mTitleBack = findViewById(R.id.title_back);
         mTvRight = findViewById(R.id.title_right);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        addressList = SPUtil.getDataList(this, SPConstants.TAG_ADDRESS_LIST, AddressBean.class);
+        if (addressList.size() == 0) {
+            finish();
+            return;
+        }
+        addressManagementAdapter.setData(addressList);
     }
 }

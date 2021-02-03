@@ -1,9 +1,9 @@
 package com.huawei.hmspetstore.ui.center.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,8 +38,21 @@ public class MemCenterAdapter extends RecyclerView.Adapter<MemCenterAdapter.Item
     @Override
     public void onBindViewHolder(@NonNull final ItemViewHolder holder, final int position) {
         SetMealBean mSetMealBean = mItems.get(position);
-        String memberName = String.format(holder.memberName.getContext().getString(R.string.member_name_desc), numberToChinese(holder.itemView.getContext(), position + 1));
-        holder.memberName.setText(memberName);
+        String productId = mSetMealBean.getProductId();
+        if ("member02".equals(productId)) {
+            // 3 months
+            holder.img.setImageResource(R.mipmap.member_3);
+        } else if ("member03".equals(productId)) {
+            // Lifetime
+            holder.img.setImageResource(R.mipmap.member_lifetime);
+        } else if ("subscribeMember01".equals(productId)) {
+            // Ongoing
+            holder.img.setImageResource(R.mipmap.member_o);
+        } else if ("member01".equals(productId)) {
+            // 1 month
+            holder.img.setImageResource(R.mipmap.member_1);
+        }
+        
         holder.name.setText(mSetMealBean.getName());
         holder.desc.setText(mSetMealBean.getDesc());
         holder.money.setText(mSetMealBean.getMoney());
@@ -60,52 +73,19 @@ public class MemCenterAdapter extends RecyclerView.Adapter<MemCenterAdapter.Item
     }
 
     static class ItemViewHolder extends RecyclerView.ViewHolder {
-        TextView memberName, subBtn;
+        ImageView img;
+        TextView subBtn;
         TextView name;
         TextView desc;
         TextView money;
 
         ItemViewHolder(View itemView) {
             super(itemView);
+            img = itemView.findViewById(R.id.memcenter_item_img);
             name = itemView.findViewById(R.id.memcenter_item_name);
             desc = itemView.findViewById(R.id.memcenter_item_desc);
             money = itemView.findViewById(R.id.memcenter_item_money);
-            memberName = itemView.findViewById(R.id.member_name);
             subBtn = itemView.findViewById(R.id.sub_btn);
         }
-    }
-
-    private static String numberToChinese(Context context, int number) {
-        // "零", "一", "二", "三", "四", "五", "六", "七", "八", "九"
-        String[] numbers = context.getResources().getStringArray(R.array.numbers);
-        // "", "十", "百", "千", "万", "十", "百", "千", "亿", "十"
-        String[] units = context.getResources().getStringArray(R.array.units);
-        String sign = number < 0 ? context.getResources().getString(R.string.unit_negative) : "";
-        if (number < 0) {
-            number = -number;
-        }
-        StringBuilder result = new StringBuilder(sign);
-        String string = String.valueOf(number);
-        int n = string.length();
-        char[] numberCharArray = string.toCharArray();
-        for (int i = 0; i < n; i++) {
-            int digNum = n - i; // 位数
-            int num = numberCharArray[i] - '0';
-            if (num != 0) {
-                result.append(numbers[num]).append(units[digNum - 1]);
-                continue;
-            }
-
-            if (result.toString().endsWith(numbers[0])) {
-                // 如果是单位所在的位数，则去除上一个0，加上单位
-                if (digNum % 4 == 1) {
-                    result.deleteCharAt(result.length() - 1);
-                    result.append(units[digNum - 1]);
-                }
-            } else {
-                result.append(numbers[0]);
-            }
-        }
-        return result.toString();
     }
 }

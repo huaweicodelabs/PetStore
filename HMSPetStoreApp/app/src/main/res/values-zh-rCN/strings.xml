@@ -46,10 +46,12 @@
 
     <string name="store_detail">店铺详情</string>
     <string name="pet_store">宠物商店</string>
+    <string name="directory">宠物商店</string>
     <string name="pet_ebook">宠物电子书</string>
     <string name="pet_ebook_detail">文章详情</string>
     <string name="pet_video_collection">收藏</string>
     <string name="pet_video_recommend">推荐</string>
+    <string name="pet_video_new">新的</string>
     <string name="video_collection_1">收藏-这是什么</string>
     <string name="video_collection_2">收藏-别挠我</string>
     <string name="video_collection_3">收藏-我不服</string>
@@ -63,7 +65,6 @@
     <string name="login">用户登录</string>
     <string name="login_with_fingerprint">指纹登录</string>
     <string name="setting">设置</string>
-    <string name="order">订单查询</string>
     <string name="bind_phone">绑定手机</string>
     <string name="agreement_privacy">点注册/登录代表同意宠物市场《用户协议》和《隐私政策》</string>
 
@@ -87,6 +88,7 @@
     <string name="order_totals">共 %1$s 件，总计： %2$s 元</string>
     <string name="order_unit">%1$s元</string>
     <string name="unit_negative">负</string>
+    <string name="order_list_empty">你还没有购买任何套餐，点击此处开始购买</string>
 
     <string name="address">收货地址</string>
 

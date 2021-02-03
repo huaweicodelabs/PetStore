@@ -1,20 +1,27 @@
 package com.huawei.hmspetstore.ui.order;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.huawei.hms.iap.IapClient;
 import com.huawei.hms.iap.entity.InAppPurchaseData;
 import com.huawei.hmspetstore.R;
 import com.huawei.hmspetstore.bean.OrderBean;
+import com.huawei.hmspetstore.ui.center.MemberCenterAct;
 import com.huawei.hmspetstore.ui.center.MemberRight;
 import com.huawei.hmspetstore.ui.center.PurchasesOperation;
 import com.huawei.hmspetstore.ui.center.RecordListener;
 import com.huawei.hmspetstore.ui.order.adapter.OrderAdapter;
+import com.huawei.hmspetstore.util.LoginUtil;
 import com.huawei.hmspetstore.util.ToastUtil;
 import com.huawei.hmspetstore.view.DividerItemDecoration;
 
@@ -27,6 +34,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,6 +50,7 @@ public class OrderAct extends AppCompatActivity {
 
     private static final int REFRESH_NONCONSUMABLE_DATA = 2;
 
+    private TextView mTvEmpty;
     // 顶部空格
     private View topEmpty;
     // 列表
@@ -64,7 +73,7 @@ public class OrderAct extends AppCompatActivity {
         // 初始化RecyclerView
         initRecyclerView();
         // 提示进入的Kit
-        ToastUtil.getInstance().showShort(this,R.string.toast_iap_product);
+        ToastUtil.getInstance().showShort(this, R.string.toast_iap_product);
     }
 
     /**
@@ -73,6 +82,7 @@ public class OrderAct extends AppCompatActivity {
     private void initView() {
         // 顶部返回
         ImageView mIvBack = findViewById(R.id.title_back);
+        mTvEmpty = findViewById(R.id.order_empty);
         mRecyclerView = findViewById(R.id.order_recyclerView);
         topEmpty = findViewById(R.id.order_topEmpty);
         mIvBack.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +92,35 @@ public class OrderAct extends AppCompatActivity {
                 finish();
             }
         });
+
+        mTvEmpty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 跳转到会员中心
+                if (LoginUtil.loginCheck(OrderAct.this)) {
+                    startActivity(new Intent(OrderAct.this, MemberCenterAct.class));
+                }
+            }
+        });
+
+        String content = getString(R.string.order_list_empty);
+        SpannableString mSpannableString = getSpannableString(content);
+        mTvEmpty.setText(mSpannableString);
     }
+
+    private SpannableString getSpannableString(String content) {
+        // 你还没有购买任何套餐，点击此处开始购买
+        // Looks like you haven't tried out our packages! Choose the one that works best for you.
+        SpannableString mSpannableString = new SpannableString(content);
+        ForegroundColorSpan colorSpan = new ForegroundColorSpan(ContextCompat.getColor(this, R.color.colorPrimary));
+        if (content.contains("点击")) {
+            mSpannableString.setSpan(colorSpan, 11, 13, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        } else if (content.contains("one")) {
+            mSpannableString.setSpan(colorSpan, 59, 62, Spanned.SPAN_INCLUSIVE_INCLUSIVE);
+        }
+        return mSpannableString;
+    }
+
 
     /**
      * 设置列表数据
@@ -173,6 +211,10 @@ public class OrderAct extends AppCompatActivity {
                     }
                     if (activity.mItemData != null && activity.mItemData.size() > 0) {
                         activity.topEmpty.setVisibility(View.VISIBLE);
+                        activity.mTvEmpty.setVisibility(View.GONE);
+                    } else {
+                        activity.topEmpty.setVisibility(View.GONE);
+                        activity.mTvEmpty.setVisibility(View.VISIBLE);
                     }
                     activity.mRecyclerView.getAdapter().notifyDataSetChanged();
                     break;
@@ -191,6 +233,10 @@ public class OrderAct extends AppCompatActivity {
                     }
                     if (activity.mItemData != null && activity.mItemData.size() > 0) {
                         activity.topEmpty.setVisibility(View.VISIBLE);
+                        activity.mTvEmpty.setVisibility(View.GONE);
+                    } else {
+                        activity.topEmpty.setVisibility(View.GONE);
+                        activity.mTvEmpty.setVisibility(View.VISIBLE);
                     }
                     activity.mRecyclerView.getAdapter().notifyDataSetChanged();
                     break;

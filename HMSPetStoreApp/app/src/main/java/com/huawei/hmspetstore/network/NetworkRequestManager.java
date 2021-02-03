@@ -143,7 +143,7 @@ public class NetworkRequestManager {
      */
     public static void getDrivingRoutePlanningResult(final LatLng latLng1, final LatLng latLng2,
                                                      final OnNetworkListener listener) {
-        getDrivingRoutePlanningResult(latLng1, latLng2, listener);
+        getDrivingRoutePlanningResult(latLng1, latLng2, listener,0);
     }
 
     /**

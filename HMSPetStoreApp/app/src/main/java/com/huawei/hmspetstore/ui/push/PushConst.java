@@ -10,7 +10,7 @@ public interface PushConst {
 
     String ACTION_INNER_MESSAGE = "com.huawei.hmspetstore.innermessage";
 
-    String PUSH_SPLIT = " ";
+    String PUSH_SPLIT = "~";
 
     String TOPIC_STORE = "PetStore";
     String TOPIC_VEDIO = "PetVedio";

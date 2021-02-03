@@ -102,7 +102,7 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
 
     private TextView mTvPetStoreName;
 
-    private TextView mTvPetStoreCollection;
+    private ImageView mIvCollection;
 
     private TextView mTvPetStoreDescription;
 
@@ -285,7 +285,6 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
         mMapView.getMapAsync(this);
     }
 
-
     /**
      * 控件绑定
      */
@@ -294,7 +293,7 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
         mMapView = findViewById(R.id.mapview_mapviewdemo);
         mTvPetStoreName = findViewById(R.id.petstore_name);
         mIvSearchNearby = findViewById(R.id.img_search_nearby);
-        mTvPetStoreCollection = findViewById(R.id.petstore_collection);
+        mIvCollection = findViewById(R.id.petstore_collection);
         mTvPetStoreDescription = findViewById(R.id.petstore_description);
         mViewRoutePlanning = findViewById(R.id.view_route_planning);
         mViewMapStyle = findViewById(R.id.view_map_style);
@@ -309,7 +308,7 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
     private void initListener() {
         mIvBack.setOnClickListener(this);
         mIvSearchNearby.setOnClickListener(this);
-        mTvPetStoreCollection.setOnClickListener(this);
+        mIvCollection.setOnClickListener(this);
 
         // 自定义样式
         mViewMapStyle.setOnMapStyleSelectedListener(new MapStyleExpandView.OnMapStyleSelectedListener() {
@@ -416,8 +415,7 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
         ToastUtil.getInstance().showShort(PetStoreSearchDetailActivity.this, getString(R.string.toast_collection));
         // 点击按钮之后修改按钮颜色
         isClickedCollection = true;
-        mTvPetStoreCollection.setTextColor(getResources().getColor(R.color.Blue_600));
-        mTvPetStoreCollection.setText(getString(R.string.add_follow));
+        mIvCollection.setImageResource(R.mipmap.ic_collection);
         Log.i(TAG, "begin to create Geofence");
         pendingIntent = getPendingIntent();
         geofenceList = new ArrayList<>();
@@ -450,8 +448,7 @@ public class PetStoreSearchDetailActivity extends AppCompatActivity implements O
         Log.i(TAG, "have clicked collection button" + isClickedCollection);
         ToastUtil.getInstance().showShort(PetStoreSearchDetailActivity.this, getString(R.string.toast_cancel_collection));
         // 取消收藏时，将收藏按钮恢复成正常状态
-        mTvPetStoreCollection.setTextColor(getResources().getColor(R.color.Grey_700));
-        mTvPetStoreCollection.setText(getString(R.string.add_follow));
+        mIvCollection.setImageResource(R.mipmap.ic_attention);
         isClickedCollection = false;
         // 移除地理围栏
         idList = new ArrayList<>();

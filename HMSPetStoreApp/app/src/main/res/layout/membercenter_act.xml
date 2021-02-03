@@ -66,22 +66,6 @@
 
     </LinearLayout>
 
-
-    <TextView
-        android:id="@+id/add_address_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/petstore_10_dp"
-        android:layout_marginEnd="@dimen/petstore_10_dp"
-        android:layout_marginBottom="@dimen/petstore_10_dp"
-        android:gravity="center"
-        android:background="@drawable/bg_add_address"
-        android:paddingVertical="@dimen/petstore_11_dp"
-        android:text="@string/add_delivery_address"
-        android:textColor="@color/petstore_black"
-        android:textSize="@dimen/petstore_text_16_sp" />
-
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/membercenter_recyclerView"
         android:layout_width="match_parent"

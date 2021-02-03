@@ -82,7 +82,7 @@
                         android:drawableTop="@mipmap/main_store"
                         android:drawablePadding="@dimen/petstore_10_dp"
                         android:gravity="center"
-                        android:text="@string/pet_store"
+                        android:text="@string/directory"
                         android:textColor="@color/Black" />
 
                     <androidx.appcompat.widget.AppCompatTextView

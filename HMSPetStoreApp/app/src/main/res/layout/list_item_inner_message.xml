@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/ivIcon"
-        android:layout_width="@dimen/petstore_40_dp"
-        android:layout_height="@dimen/petstore_40_dp"
+        android:layout_width="@dimen/petstore_50_dp"
+        android:layout_height="@dimen/petstore_50_dp"
         android:layout_gravity="center_vertical"
         app:srcCompat="@drawable/ic_inner_message"
         tools:ignore="ContentDescription" />
@@ -35,6 +35,7 @@
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:singleLine="true"
+                android:textColor="@color/Black"
                 android:textSize="18sp" />
 
             <TextView
@@ -42,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:textColor="@color/Grey_900"
                 android:textSize="12sp" />
         </LinearLayout>
 
@@ -50,7 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:singleLine="true" />
+            android:maxLines="2"
+            android:textColor="@color/Grey_900" />
     </LinearLayout>
 
 </LinearLayout>

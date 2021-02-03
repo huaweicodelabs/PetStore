@@ -12,14 +12,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.huawei.hmspetstore.R;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * 功能描述
  */
 public class InnerMessageAdapter extends RecyclerView.Adapter<InnerMessageAdapter.ItemViewHolder> {
-    private LinkedList<InnerMessage> data;
+    private List<InnerMessage> data;
 
-    public InnerMessageAdapter(LinkedList<InnerMessage> data) {
+    public InnerMessageAdapter(List<InnerMessage> data) {
         this.data = data;
     }
 
@@ -45,11 +46,6 @@ public class InnerMessageAdapter extends RecyclerView.Adapter<InnerMessageAdapte
         holder.tvTitle.setText(message.getTitle());
         holder.tvContent.setText(message.getContent());
         holder.tvDate.setText(message.getDate());
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return i;
     }
 
     @Override

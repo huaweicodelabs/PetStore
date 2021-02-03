@@ -7,12 +7,14 @@ public class SetMealBean {
     private String name;
     private String desc;
     private String money;
+    private String productId;
     private ProductInfo productInfo;
 
     public SetMealBean(ProductInfo productInfo) {
         this.name = productInfo.getProductName();
         this.desc = productInfo.getProductDesc();
         this.money = productInfo.getPrice();
+        this.productId = productInfo.getProductId();
         this.productInfo = productInfo;
     }
 
@@ -46,5 +48,13 @@ public class SetMealBean {
 
     public void setMoney(String money) {
         this.money = money;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 }

@@ -192,45 +192,30 @@ public class MineCenterAct extends AppCompatActivity {
      */
     private void initMemberInfo() {
         initData();
-
-        // 会员状态显示
-        if (MemberRight.isVideoAvailableForever(this)) {
-            mTvMembers.setVisibility(View.GONE);
-        } else if (MemberRight.isVideoSubscriptionValid(this)) {
-            mTvMembers.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getVideoSubscriptionExpireDate(this))));
-        } else if (MemberRight.isVideoAvailable(this)) {
-            mTvMembers.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getNormalVideoExpireDate(this))));
-        }
-
-        // 会员状态显示
-        if (MemberRight.isVideoAvailableForever(this)) {
-            mTvMembersTime.setText(R.string.iap_buy_forever);
-            mTvMembers.setVisibility(View.GONE);
-        } else if (MemberRight.isVideoSubscriptionValid(this)) {
-            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getVideoSubscriptionExpireDate(this))));
-            mTvMembers.setVisibility(View.GONE);
-        } else if (MemberRight.isVideoAvailable(this)) {
-            mTvMembers.setVisibility(View.GONE);
-            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getNormalVideoExpireDate(this))));
-        } else {
-            mTvMembers.setVisibility(View.VISIBLE);
-        }
-
         // 会员详情展示
         if (MemberRight.isVideoAvailableForever(this)) {
             mLlMemberLayout.setVisibility(View.VISIBLE);
+            mTvMembersTime.setText(R.string.iap_buy_forever);
+            mTvMembers.setVisibility(View.GONE);
+            mIvMemberImg.setImageResource(R.mipmap.member_lifetime);
             mTvMemberName.setText(R.string.iap_buy_member_forever);
             mTvMemberDesc.setText(R.string.member_desc);
             mTvMemberPay.setVisibility(View.GONE);
-        } else if (System.currentTimeMillis() < MemberRight.getVideoSubscriptionExpireDate(this)) {
+        } else if (MemberRight.isVideoSubscriptionValid(this)) {
             mLlMemberLayout.setVisibility(View.VISIBLE);
             mTvMemberName.setText(R.string.iap_buy_member_subscription);
             mTvMemberDesc.setText(R.string.member_desc);
             mTvMemberPay.setText(R.string.iap_buy_subscription);
+            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getVideoSubscriptionExpireDate(this))));
+            mTvMembers.setVisibility(View.GONE);
+            mIvMemberImg.setImageResource(R.mipmap.member_o);
         } else if (MemberRight.isVideoAvailable(this)) {
             mLlMemberLayout.setVisibility(View.VISIBLE);
             mTvMemberName.setText(R.string.iap_buy_member);
             mTvMemberDesc.setText(R.string.member_desc);
+            mTvMembers.setVisibility(View.GONE);
+            mIvMemberImg.setImageResource(R.mipmap.member_1);
+            mTvMembersTime.setText(getString(R.string.iap_member_valid, new SimpleDateFormat("MM/dd/YYYY", Locale.US).format(MemberRight.getNormalVideoExpireDate(this))));
             mTvMemberPay.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -239,6 +224,7 @@ public class MineCenterAct extends AppCompatActivity {
             });
         } else {
             mLlMemberLayout.setVisibility(View.GONE);
+            mTvMembers.setVisibility(View.VISIBLE);
         }
     }
 

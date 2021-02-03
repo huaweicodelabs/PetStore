@@ -37,10 +37,10 @@
     </RelativeLayout>
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -66,7 +66,6 @@
                 android:layout_marginLeft="@dimen/petstore_20_dp"
                 android:background="@null"
                 android:enabled="true"
-                android:hint="@string/please_input_name"
                 android:textColor="@color/Black"
                 android:textSize="@dimen/petstore_text_14_sp" />
 
@@ -99,7 +98,6 @@
                 android:background="@null"
                 android:enabled="true"
                 android:inputType="phone"
-                android:hint="@string/please_input_phone"
                 android:textColor="@color/Black"
                 android:textSize="@dimen/petstore_text_14_sp" />
         </androidx.appcompat.widget.LinearLayoutCompat>
@@ -138,7 +136,6 @@
                     android:layout_marginBottom="@dimen/petstore_10_dp"
                     android:background="@null"
                     android:enabled="true"
-                    android:hint="@string/please_input_address"
                     android:textColor="@color/Black"
                     android:textSize="@dimen/petstore_text_14_sp" />
 
@@ -173,16 +170,16 @@
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:orientation="horizontal"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:layout_height="wrap_content">
+            android:orientation="horizontal">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_weight="1"
                 android:layout_marginLeft="@dimen/petstore_10_dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView

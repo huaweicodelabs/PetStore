@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/petstore_5_dp"
-        android:text="@string/pet_store"
+        android:text="@string/directory"
         android:textColor="@color/Black"
         android:textSize="@dimen/petstore_text_16_sp" />
 

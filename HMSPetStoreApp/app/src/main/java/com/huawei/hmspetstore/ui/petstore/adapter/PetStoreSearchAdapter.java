@@ -46,14 +46,6 @@ public class PetStoreSearchAdapter extends RecyclerView.Adapter<PetStoreSearchAd
     @Override
     public void onBindViewHolder(@NonNull final ItemViewHolder holder, final int position) {
         Place mPetStoreBean = mPlaces.get(position);
-        if (position % 2 == 0) {
-            holder.isAuth.setVisibility(View.VISIBLE);
-            holder.isPaid.setVisibility(View.VISIBLE);
-        } else {
-            holder.isAuth.setVisibility(View.GONE);
-            holder.isPaid.setVisibility(View.GONE);
-        }
-
         holder.name.setText(mPetStoreBean.getName());
         holder.desc.setText(mPetStoreBean.getFormatAddress());
 
@@ -81,17 +73,14 @@ public class PetStoreSearchAdapter extends RecyclerView.Adapter<PetStoreSearchAd
     }
 
     static class ItemViewHolder extends RecyclerView.ViewHolder {
-        private TextView isAuth;
+
         private TextView name;
-        private TextView isPaid;
         private TextView desc;
         private TextView distance;
 
         ItemViewHolder(View itemView) {
             super(itemView);
-            isAuth = itemView.findViewById(R.id.petstore_item_auth);
             name = itemView.findViewById(R.id.petstore_item_name);
-            isPaid = itemView.findViewById(R.id.petstore_item_paid);
             desc = itemView.findViewById(R.id.petstore_item_desc);
             distance = itemView.findViewById(R.id.petstore_item_distance);
         }

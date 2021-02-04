@@ -36,7 +36,7 @@
 
 ## Function Use
     You can tap buttons in your app to experience rich services of HMS Services. And you can download the apk through the following Qr code.
-![image](https://github.com/huaweicodelabs/PetStore/blob/master/HMSPetStoreApp/QR%20Code%20Of%20HMSPetStoreApp.png)
+![image](https://github.com/huaweicodelabs/PetStore/blob/master/HMSPetStoreApp/QRCode_HMSPetStoreApp.png)
 
 ## License
     The sample of PetStore has obtained the [Apache 2.0 license.](https://www.apache.org/licenses/LICENSE-2.0).
